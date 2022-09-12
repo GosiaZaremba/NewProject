@@ -16,6 +16,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import {LoginTemplate} from './components/templates/LoginTemplate/LoginTemplate';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -25,7 +26,7 @@ const App = () => {
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         <View>
-          <Text>Hello World!</Text>
+          <LoginTemplate></LoginTemplate>
         </View>
       </ScrollView>
     </SafeAreaView>
