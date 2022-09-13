@@ -1,6 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
-import {ScreenTitle} from '../../atoms';
+import {Label, ScreenTitle} from '../../atoms';
+import {SocialLogin} from '../../molecules/SocialLogin/SocialLogin';
 import {LoginArea} from '../../organisms';
 
 export type Props = {
@@ -9,6 +10,8 @@ export type Props = {
   onChangeText: () => void;
   value: string;
   screenTitle: string;
+  onPressGoogle: () => void;
+  onPressFacebook: () => void;
 };
 
 export const LoginTemplate: React.FC<Props> = ({
@@ -16,15 +19,23 @@ export const LoginTemplate: React.FC<Props> = ({
   color,
   onChangeText,
   value,
+  onPressFacebook,
+  onPressGoogle,
 }) => {
   return (
     <View>
-      <ScreenTitle screenTitle={'Please log in'}></ScreenTitle>
+      <ScreenTitle screenTitle={'Welcome back!'} />
       <LoginArea
         onPress={onPress}
         color={color}
         onChangeText={onChangeText}
-        value={value}></LoginArea>
+        value={value}
+      />
+      <Label labelText="OR" />
+      <SocialLogin
+        onPressFacebook={onPressFacebook}
+        onPressGoogle={onPressGoogle}
+      />
     </View>
   );
 };

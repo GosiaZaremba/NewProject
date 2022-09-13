@@ -29,7 +29,7 @@ export const LoginArea: React.FC<Props> = ({
         secureTextEntry={true}
         value={value}></CustomInput>
       <CustomButton
-        title={'Log in'}
+        title={'Sign in'}
         onPress={onPress}
         color={color}></CustomButton>
     </View>
