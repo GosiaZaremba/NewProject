@@ -1,14 +1,11 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {Text} from 'react-native';
+import styles from './ScreenTitle.styles';
 
 export type Props = {
   screenTitle: string;
 };
 
 export const ScreenTitle: React.FC<Props> = ({screenTitle}) => {
-  return (
-    <View>
-      <Text>{screenTitle}</Text>
-    </View>
-  );
+  return <Text>{screenTitle}</Text>;
 };
