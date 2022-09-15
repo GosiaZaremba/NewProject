@@ -1,7 +1,7 @@
 export const Colors = {
-  one: '#ECEBE8',
-  two: '#3A3333',
-  three: '#EBB83C',
-  four: '#796645',
+  pink: '#fc296f',
+  red: '#e63039',
+  navy: '#39539b',
+  blue: '#3872c3',
   five: '#908D8E',
 };

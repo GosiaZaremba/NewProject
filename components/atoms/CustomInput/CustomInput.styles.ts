@@ -6,5 +6,6 @@ export default StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: Colors.five,
     padding: 10,
+    width: '100%',
   },
 });

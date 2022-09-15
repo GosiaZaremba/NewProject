@@ -1,53 +1,38 @@
 import React from 'react';
 import {View} from 'react-native';
 import {Colors} from '../../../constants/colors';
-import {BottomImage, Label, ScreenTitle, TopImage} from '../../atoms';
-import {SocialLogin} from '../../molecules/SocialLogin/SocialLogin';
+import {Label, ScreenTitle} from '../../atoms';
+import {SocialLogin} from '../../organisms/SocialLogin/SocialLogin';
 import {LoginArea} from '../../organisms';
 import styles from './LoginTemplate.styles';
 
 export type Props = {
-  onPress: () => void;
+  onSubmitForm: () => void;
   color: string;
-  onChangeText: () => void;
-  value: string;
   screenTitle: string;
   onPressGoogle: () => void;
   onPressFacebook: () => void;
-  iconFBColor: string;
 };
 
 export const LoginTemplate: React.FC<Props> = ({
-  onPress,
-  onChangeText,
-  value,
+  onSubmitForm,
   onPressFacebook,
   onPressGoogle,
+  screenTitle,
 }) => {
   return (
     <View>
-      <View style={styles.topImageView}>
-        <TopImage />
-      </View>
+      <View style={styles.topImageView}></View>
       <View>
-        <ScreenTitle screenTitle={'Welcome back!'} />
-        <LoginArea
-          onPress={onPress}
-          color={Colors.three}
-          onChangeText={onChangeText}
-          value={value}
-        />
+        <ScreenTitle screenTitle={screenTitle} />
+        <LoginArea onSubmitForm={onSubmitForm} color={Colors.pink} />
         <Label labelText="OR" />
         <SocialLogin
           onPressFacebook={onPressFacebook}
           onPressGoogle={onPressGoogle}
-          iconFBColor={Colors.two}
-          iconGoogleColor={Colors.two}
         />
       </View>
-      <View style={styles.bottomImageView}>
-        <BottomImage />
-      </View>
+      <View style={styles.bottomImageView}></View>
     </View>
   );
 };

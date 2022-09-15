@@ -1,11 +1,13 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-  pressable: {},
+  pressable: {
+    opacity: 1,
+  },
   pressed: {
     opacity: 0.5,
   },
-  iconGoogle: {
-    fontSize: 40,
+  iconFB: {
+    fontSize: 24,
   },
 });
