@@ -3,9 +3,10 @@ import {Colors} from '../../../constants/colors';
 
 export default StyleSheet.create({
   input: {
-    borderBottomWidth: 1,
-    borderBottomColor: Colors.five,
+    borderWidth: 1,
+    borderColor: Colors.five,
     padding: 10,
     width: '100%',
+    borderRadius: 5,
   },
 });

@@ -7,19 +7,30 @@ export type Props = {
   onPressIcon: () => void;
   iconColor: string;
   iconName: string;
+  iconSize: number;
+  iconBorderColor: string;
 };
 
 export const CustomIcon: React.FC<Props> = ({
   onPressIcon,
   iconColor,
   iconName,
+  iconSize,
+  iconBorderColor,
 }) => {
   return (
     <Pressable
       onPress={onPressIcon}
       hitSlop={5}
-      style={({pressed}) => (pressed ? styles.pressed : styles.pressable)}>
-      <Icon name={iconName} style={styles.iconFB} color={iconColor}></Icon>
+      style={({pressed}) =>
+        pressed
+          ? [styles.pressed, {borderColor: iconBorderColor}]
+          : [styles.pressable, {borderColor: iconBorderColor}]
+      }>
+      <Icon
+        name={iconName}
+        style={{fontSize: iconSize}}
+        color={iconColor}></Icon>
     </Pressable>
   );
 };

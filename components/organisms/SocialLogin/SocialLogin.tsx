@@ -15,22 +15,26 @@ export const SocialLogin: React.FC<Props> = ({
 }) => {
   return (
     <View style={styles.socialContainer}>
-      <View>
-        <CustomIcon
-          onPressIcon={onPressGoogle}
-          iconColor={Colors.red}
-          iconName={'google'}
-        />
-      </View>
+      <CustomIcon
+        onPressIcon={onPressGoogle}
+        iconColor={Colors.red}
+        iconName={'google'}
+        iconSize={20}
+        iconBorderColor={Colors.red}
+      />
       <CustomIcon
         onPressIcon={onPressFacebook}
         iconColor={Colors.navy}
         iconName={'facebook'}
+        iconSize={20}
+        iconBorderColor={Colors.navy}
       />
       <CustomIcon
         onPressIcon={onPressGoogle}
         iconColor={Colors.blue}
         iconName={'linkedin'}
+        iconSize={20}
+        iconBorderColor={Colors.blue}
       />
     </View>
   );

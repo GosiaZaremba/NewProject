@@ -3,7 +3,7 @@ import {View} from 'react-native';
 import {Colors} from '../../../constants/colors';
 import {Label, ScreenTitle} from '../../atoms';
 import {SocialLogin} from '../../organisms/SocialLogin/SocialLogin';
-import {LoginArea} from '../../organisms';
+import {LoginForm} from '../../organisms';
 import styles from './LoginTemplate.styles';
 
 export type Props = {
@@ -22,17 +22,13 @@ export const LoginTemplate: React.FC<Props> = ({
 }) => {
   return (
     <View>
-      <View style={styles.topImageView}></View>
-      <View>
-        <ScreenTitle screenTitle={screenTitle} />
-        <LoginArea onSubmitForm={onSubmitForm} color={Colors.pink} />
-        <Label labelText="OR" />
-        <SocialLogin
-          onPressFacebook={onPressFacebook}
-          onPressGoogle={onPressGoogle}
-        />
-      </View>
-      <View style={styles.bottomImageView}></View>
+      <ScreenTitle screenTitle={'LOGIN'} />
+      <LoginForm onSubmitForm={onSubmitForm} color={Colors.pink} />
+      <Label text={'Forgot Password?'} />
+      <SocialLogin
+        onPressFacebook={onPressFacebook}
+        onPressGoogle={onPressGoogle}
+      />
     </View>
   );
 };

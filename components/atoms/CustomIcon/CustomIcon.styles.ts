@@ -2,12 +2,22 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   pressable: {
-    opacity: 1,
+    width: 45,
+    height: 45,
+    borderWidth: 3,
+    borderRadius: 50,
+    padding: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   pressed: {
     opacity: 0.5,
-  },
-  iconFB: {
-    fontSize: 24,
+    width: 45,
+    height: 45,
+    borderWidth: 3,
+    borderRadius: 50,
+    padding: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
