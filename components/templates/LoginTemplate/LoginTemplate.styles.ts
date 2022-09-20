@@ -1,11 +1,14 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-  topImageView: {
-    alignItems: 'flex-end',
-    justifyContent: 'flex-start',
+  mainContainer: {
+    padding: 40,
   },
-  bottomImageView: {
-    opacity: 0.5,
+  footer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  link: {
+    alignSelf: 'flex-end',
   },
 });

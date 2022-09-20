@@ -9,6 +9,7 @@ export default StyleSheet.create({
     padding: 10,
     alignItems: 'center',
     justifyContent: 'center',
+    margin: 10,
   },
   pressed: {
     opacity: 0.5,
@@ -19,5 +20,6 @@ export default StyleSheet.create({
     padding: 10,
     alignItems: 'center',
     justifyContent: 'center',
+    margin: 10,
   },
 });

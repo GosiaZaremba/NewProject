@@ -1,5 +1,4 @@
 import {StyleSheet} from 'react-native';
-import {Colors} from '../../../constants/colors';
 
 export default StyleSheet.create({
   outerContainer: {
@@ -7,8 +6,18 @@ export default StyleSheet.create({
   },
   inputsContainer: {
     marginVertical: 5,
+    width: '100%',
+  },
+  inputContainer: {
+    marginTop: 20,
   },
   buttonContainer: {
-    marginVertical: 10,
+    marginVertical: 15,
+    width: '100%',
+  },
+  switch: {
+    alignSelf: 'flex-start',
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 });

@@ -8,13 +8,14 @@
 
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import {LoginTemplate} from './components/templates/LoginTemplate/LoginTemplate';
+
 import {Colors} from './constants/colors';
+import {LoginScreen} from './screens/LoginScreen';
 
 const App = () => {
   return (
     <View style={styles.outerContainer}>
-      <LoginTemplate></LoginTemplate>
+      <LoginScreen />
     </View>
   );
 };

@@ -7,5 +7,5 @@ export type Props = {
 };
 
 export const ScreenTitle: React.FC<Props> = ({screenTitle}) => {
-  return <Text>{screenTitle}</Text>;
+  return <Text style={styles.titleText}>{screenTitle}</Text>;
 };

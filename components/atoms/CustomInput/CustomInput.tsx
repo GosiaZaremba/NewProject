@@ -21,7 +21,6 @@ const CustomInputWithReference: React.ForwardRefRenderFunction<
   const inputReference = useRef<TextInput>(null);
 
   const onChangeText = (value: string) => {
-    console.log(value);
     setValue(value);
   };
 
