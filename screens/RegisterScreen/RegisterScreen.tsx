@@ -1,16 +1,15 @@
 import React from 'react';
-import {LoginTemplate} from '../components/templates';
+import {RegisterTemplate} from '../../components/templates';
 
 export type Props = {
   onSubmitForm: () => void;
   onPressGoogle: () => void;
   onPressFacebook: () => void;
-  onPressForgotPassword: () => void;
-  onPressNavigateSignup: () => void;
+  onPressNavigateLogin: () => void;
   onPressLinkedin: () => void;
 };
 
-export const LoginScreen: React.FC<Props> = () => {
+export const RegisterScreen: React.FC<Props> = () => {
   const onSubmitForm = () => {
     console.log('onSubmitForm');
   };
@@ -21,24 +20,19 @@ export const LoginScreen: React.FC<Props> = () => {
     console.log('onPressGoogle');
   };
 
-  const onPressForgotPassword = () => {
-    console.log('onPressForgotPassword');
-  };
-
-  const onPressNavigateSignup = () => {
-    console.log('onPressNavigateSignup');
+  const onPressNavigateLogin = () => {
+    console.log('onPressNavigateLogin');
   };
   const onPressLinkedin = () => {
     console.log('onPressLinkedin');
   };
 
   return (
-    <LoginTemplate
+    <RegisterTemplate
       onSubmitForm={onSubmitForm}
       onPressFacebook={onPressFacebook}
       onPressGoogle={onPressGoogle}
-      onPressForgotPassword={onPressForgotPassword}
-      onPressNavigateSignup={onPressNavigateSignup}
+      onPressNavigateLogin={onPressNavigateLogin}
       onPressLinkedin={onPressLinkedin}
     />
   );

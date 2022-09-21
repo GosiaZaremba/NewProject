@@ -8,13 +8,13 @@
 
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-
 import {Colors} from './constants/colors';
-import {LoginScreen} from './screens/LoginScreen';
+import {LoginScreen, RegisterScreen} from './screens';
 
 const App = () => {
   return (
     <View style={styles.outerContainer}>
+      {/* <RegisterScreen /> */}
       <LoginScreen />
     </View>
   );
@@ -24,6 +24,7 @@ export default App;
 
 const styles = StyleSheet.create({
   outerContainer: {
-    backgroundColor: Colors.one,
+    flex: 1,
+    backgroundColor: Colors.light,
   },
 });
