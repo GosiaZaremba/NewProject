@@ -14,8 +14,8 @@ import {LoginScreen, RegisterScreen} from './screens';
 const App = () => {
   return (
     <View style={styles.outerContainer}>
-      {/* <RegisterScreen /> */}
-      <LoginScreen />
+      <RegisterScreen />
+      {/* <LoginScreen /> */}
     </View>
   );
 };

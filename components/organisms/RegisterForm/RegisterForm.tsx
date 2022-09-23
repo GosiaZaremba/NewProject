@@ -11,17 +11,16 @@ import styles from './RegisterForm.styles';
 
 export type Props = {
   onSubmitForm: (email: string, password: string) => void;
-  color: string;
 };
 
-export const RegisterForm: React.FC<Props> = ({onSubmitForm, color}) => {
+export const RegisterForm: React.FC<Props> = ({onSubmitForm}) => {
   const emailInputReference = useRef<CustomInputReference>(null);
   const passwordInputReference = useRef<CustomInputReference>(null);
 
   const onSubmit = () => {
     const emailValue = emailInputReference.current?.getValue() || '';
     const passwordValue = passwordInputReference.current?.getValue() || '';
-    console.log('email', emailValue, 'password', passwordValue);
+    // console.log('email', emailValue, 'password', passwordValue);
     onSubmitForm(emailValue, passwordValue);
   };
 
@@ -46,7 +45,11 @@ export const RegisterForm: React.FC<Props> = ({onSubmitForm, color}) => {
         </View>
       </View>
       <View style={styles.buttonContainer}>
-        <CustomButton title={'SIGN UP'} onPress={onSubmit} color={color} />
+        <CustomButton
+          title={'SIGN UP'}
+          onPress={onSubmit}
+          color={Colors.pink}
+        />
       </View>
     </View>
   );

@@ -12,6 +12,7 @@ export const CustomButton: React.FC<Props> = ({title, onPress, color}) => {
       title={title}
       onPress={onPress}
       color={color}
-      accessibilityLabel={title}></Button>
+      accessibilityLabel={title}
+    />
   );
 };

@@ -5,4 +5,6 @@ export {CustomIcon} from './CustomIcon/CustomIcon';
 export {Label} from './Label/Label';
 export {Link} from './Link/Link';
 export {Divider} from './Divider/Divider';
+export {CustomSwitch} from './CustomSwitch/CustomSwitch';
 export {CustomInputReference} from './CustomInput/CustomInput';
+export {CustomSwitchReference} from './CustomSwitch/CustomSwitch';

@@ -9,6 +9,8 @@ export default StyleSheet.create({
     height: 1,
     borderRadius: 5,
     position: 'relative',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   innerContainer: {
     borderWidth: 1,
@@ -17,7 +19,5 @@ export default StyleSheet.create({
     borderRadius: 5,
     position: 'absolute',
     backgroundColor: Colors.light,
-    bottom: -15,
-    left: '45%',
   },
 });

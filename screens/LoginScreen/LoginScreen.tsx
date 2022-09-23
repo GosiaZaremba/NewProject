@@ -2,7 +2,11 @@ import React from 'react';
 import {LoginTemplate} from '../../components/templates';
 
 export type Props = {
-  onSubmitForm: () => void;
+  onSubmitForm: (
+    email: string,
+    password: string,
+    rememberMe: boolean | undefined,
+  ) => void;
   onPressGoogle: () => void;
   onPressFacebook: () => void;
   onPressForgotPassword: () => void;
@@ -11,8 +15,12 @@ export type Props = {
 };
 
 export const LoginScreen: React.FC<Props> = () => {
-  const onSubmitForm = () => {
-    console.log('onSubmitForm');
+  const onSubmitForm = (
+    email: string,
+    password: string,
+    rememberMe: boolean | undefined,
+  ) => {
+    console.log('email', email, 'password', password, 'rememberMe', rememberMe);
   };
   const onPressFacebook = () => {
     console.log('onPressFacebook');

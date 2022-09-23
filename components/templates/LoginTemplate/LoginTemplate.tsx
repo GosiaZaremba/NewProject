@@ -7,7 +7,11 @@ import {LoginForm} from '../../organisms';
 import styles from './LoginTemplate.styles';
 
 export type Props = {
-  onSubmitForm: () => void;
+  onSubmitForm: (
+    email: string,
+    password: string,
+    rememberMe: boolean | undefined,
+  ) => void;
   onPressGoogle: () => void;
   onPressFacebook: () => void;
   onPressForgotPassword: () => void;
@@ -26,7 +30,7 @@ export const LoginTemplate: React.FC<Props> = ({
   return (
     <View style={styles.mainContainer}>
       <ScreenTitle screenTitle={'LOGIN'} />
-      <LoginForm onSubmitForm={onSubmitForm} color={Colors.pink} />
+      <LoginForm onSubmitForm={onSubmitForm} />
       <View style={styles.link}>
         <Link text={'Forgot Password?'} onPress={onPressForgotPassword} />
       </View>

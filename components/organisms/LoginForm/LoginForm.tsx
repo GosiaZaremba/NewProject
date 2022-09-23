@@ -1,53 +1,57 @@
 import React, {useRef, useState} from 'react';
-import {View, Switch} from 'react-native';
+import {View} from 'react-native';
 import {Colors} from '../../../constants/colors';
+import {CustomButton} from '../../atoms';
 import {
-  CustomButton,
-  CustomInputReference,
-  Label,
-  CustomInput,
-} from '../../atoms';
+  CustomInputLabel,
+  CustomInputLabelReference,
+  CustomSwitchLabel,
+  CustomSwitchLabelReference,
+} from '../../molecules';
 import styles from './LoginForm.styles';
 
 export type Props = {
-  onSubmitForm: (email: string, password: string) => void;
-  color: string;
+  onSubmitForm: (
+    email: string,
+    password: string,
+    rememberMe: boolean | undefined,
+  ) => void;
 };
 
-export const LoginForm: React.FC<Props> = ({onSubmitForm, color}) => {
-  const [remember, setRemember] = useState(false);
-  const emailInputReference = useRef<CustomInputReference>(null);
-  const passwordInputReference = useRef<CustomInputReference>(null);
+export const LoginForm: React.FC<Props> = ({onSubmitForm}) => {
+  const emailInputReference = useRef<CustomInputLabelReference>(null);
+  const passwordInputReference = useRef<CustomInputLabelReference>(null);
+  const rememberMeSwitchReference = useRef<CustomSwitchLabelReference>(null);
 
   const onSubmit = () => {
     const emailValue = emailInputReference.current?.getValue() || '';
     const passwordValue = passwordInputReference.current?.getValue() || '';
-    console.log(
-      'email',
-      emailValue,
-      'password',
-      passwordValue,
-      'remember',
-      remember,
-    );
-    onSubmitForm(emailValue, passwordValue);
+    const rememberMeValue = rememberMeSwitchReference.current?.getValue();
+    // console.log(
+    //   'email',
+    //   emailValue,
+    //   'password',
+    //   passwordValue,
+    //   'remember',
+    //   rememberMeValue,
+    // );
+    onSubmitForm(emailValue, passwordValue, rememberMeValue);
   };
 
-  const toggleSwitch = () => setRemember(previousState => !previousState);
   return (
     <View style={styles.outerContainer}>
       <View style={styles.inputsContainer}>
         <View style={styles.inputContainer}>
-          <Label text={'Email'} />
-          <CustomInput
+          <CustomInputLabel
+            labelText={'Email'}
             placeholder={'email'}
             secureTextEntry={false}
             ref={emailInputReference}
           />
         </View>
         <View style={styles.inputContainer}>
-          <Label text={'Password'} />
-          <CustomInput
+          <CustomInputLabel
+            labelText={'Password'}
             placeholder={'password'}
             secureTextEntry={true}
             ref={passwordInputReference}
@@ -55,15 +59,17 @@ export const LoginForm: React.FC<Props> = ({onSubmitForm, color}) => {
         </View>
       </View>
       <View style={styles.switch}>
-        <Switch
-          trackColor={{false: Colors.grey, true: Colors.grey}}
-          thumbColor={remember ? Colors.pink : Colors.grey}
-          onValueChange={toggleSwitch}
-          value={remember}></Switch>
-        <Label text={'Remember me?'} />
+        <CustomSwitchLabel
+          trackColorFalse={Colors.grey}
+          trackColorTrue={Colors.grey}
+          thumbColorOn={Colors.pink}
+          thumbColorOff={Colors.grey}
+          labelText={'Remember me?'}
+          ref={rememberMeSwitchReference}
+        />
       </View>
       <View style={styles.buttonContainer}>
-        <CustomButton title={'Login'} onPress={onSubmit} color={color} />
+        <CustomButton title={'Login'} onPress={onSubmit} color={Colors.pink} />
       </View>
     </View>
   );

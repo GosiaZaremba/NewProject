@@ -7,7 +7,7 @@ import {RegisterForm} from '../../organisms';
 import styles from './RegisterTemplate.styles';
 
 export type Props = {
-  onSubmitForm: () => void;
+  onSubmitForm: (email: string, password: string) => void;
   onPressGoogle: () => void;
   onPressFacebook: () => void;
   onPressNavigateLogin: () => void;
@@ -24,7 +24,7 @@ export const RegisterTemplate: React.FC<Props> = ({
   return (
     <View style={styles.mainContainer}>
       <ScreenTitle screenTitle={'SIGN UP'} />
-      <RegisterForm onSubmitForm={onSubmitForm} color={Colors.pink} />
+      <RegisterForm onSubmitForm={onSubmitForm} />
       <View style={styles.divider}>
         <Divider text={'OR'} />
       </View>
