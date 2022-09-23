@@ -3,37 +3,28 @@ import {View} from 'react-native';
 import {Colors} from '../../../constants/colors';
 import {Label, ScreenTitle, Link, Divider} from '../../atoms';
 import {SocialLogin} from '../../organisms/SocialLogin/SocialLogin';
-import {LoginForm} from '../../organisms';
-import styles from './LoginTemplate.styles';
+import {RegisterForm} from '../../organisms';
+import styles from './RegisterTemplate.styles';
 
 export type Props = {
-  onSubmitForm: (
-    email: string,
-    password: string,
-    rememberMe: boolean | undefined,
-  ) => void;
+  onSubmitForm: (email: string, password: string) => void;
   onPressGoogle: () => void;
   onPressFacebook: () => void;
-  onPressForgotPassword: () => void;
-  onPressNavigateSignup: () => void;
+  onPressNavigateLogin: () => void;
   onPressLinkedin: () => void;
 };
 
-export const LoginTemplate: React.FC<Props> = ({
+export const RegisterTemplate: React.FC<Props> = ({
   onSubmitForm,
   onPressFacebook,
   onPressGoogle,
-  onPressForgotPassword,
-  onPressNavigateSignup,
+  onPressNavigateLogin,
   onPressLinkedin,
 }) => {
   return (
     <View style={styles.mainContainer}>
-      <ScreenTitle screenTitle={'LOGIN'} />
-      <LoginForm onSubmitForm={onSubmitForm} />
-      <View style={styles.link}>
-        <Link text={'Forgot Password?'} onPress={onPressForgotPassword} />
-      </View>
+      <ScreenTitle screenTitle={'SIGN UP'} />
+      <RegisterForm onSubmitForm={onSubmitForm} />
       <View style={styles.divider}>
         <Divider text={'OR'} />
       </View>
@@ -43,8 +34,8 @@ export const LoginTemplate: React.FC<Props> = ({
         onPressLinkedin={onPressLinkedin}
       />
       <View style={styles.footer}>
-        <Label text={'Need an account? '} />
-        <Link text={'SIGN UP'} onPress={onPressNavigateSignup} />
+        <Label text={'Already a user? '} />
+        <Link text={'LOGIN'} onPress={onPressNavigateLogin} />
       </View>
     </View>
   );

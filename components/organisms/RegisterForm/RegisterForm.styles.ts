@@ -19,6 +19,5 @@ export default StyleSheet.create({
     alignSelf: 'flex-start',
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 10,
   },
 });

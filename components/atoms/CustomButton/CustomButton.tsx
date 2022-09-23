@@ -7,5 +7,12 @@ export type Props = {
   color: string;
 };
 export const CustomButton: React.FC<Props> = ({title, onPress, color}) => {
-  return <Button title={title} onPress={onPress} color={color}></Button>;
+  return (
+    <Button
+      title={title}
+      onPress={onPress}
+      color={color}
+      accessibilityLabel={title}
+    />
+  );
 };

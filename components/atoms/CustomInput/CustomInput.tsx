@@ -26,7 +26,6 @@ const CustomInputWithReference: React.ForwardRefRenderFunction<
 
   useImperativeHandle(ref, () => ({
     getValue: () => {
-      console.log('cośjeszcze', value);
       return value;
     },
     focus: () => {
