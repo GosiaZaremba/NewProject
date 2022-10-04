@@ -5,9 +5,13 @@
 
 function loadStories() {
     require('../components/atoms/CustomButton/CustomButton.stories');
+    require('../components/atoms/CustomIcon/CustomIcon.stories');
 }
 
-const stories = ['../components/atoms/CustomButton/CustomButton.stories'];
+const stories = [
+    '../components/atoms/CustomButton/CustomButton.stories',
+    '../components/atoms/CustomIcon/CustomIcon.stories',
+];
 
 module.exports = {
     loadStories,
