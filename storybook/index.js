@@ -19,6 +19,6 @@ const StorybookUIRoot = getStorybookUI({
 
 // If you are using React Native vanilla and after installation you don't see your app name here, write it manually.
 // If you use Expo you can safely remove this line.
-AppRegistry.registerComponent(appName, () => StorybookUIRoot);
+// AppRegistry.registerComponent(appName, () => StorybookUIRoot);
 
 export default StorybookUIRoot;
