@@ -49,7 +49,6 @@ export const RegisterForm: React.FC<Props> = ({ onSubmitForm }) => {
                     title={'SIGN UP'}
                     onPress={onSubmit}
                     color={Colors.pink}
-                    testID={'RegisterButton'}
                 />
             </View>
         </View>

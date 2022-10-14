@@ -11,6 +11,8 @@ function loadStories() {
     require('../components/atoms/Divider/Divider.stories');
     require('../components/atoms/Label/Label.stories');
     require('../components/atoms/Link/Link.stories');
+    require('../components/atoms/ScreenTitle/ScreenTitle.stories');
+    require('../components/molecules/CustomInputLabel/CustomInputLabel.stories');
 }
 
 const stories = [
@@ -21,6 +23,8 @@ const stories = [
     '../components/atoms/Divider/Divider.stories',
     '../components/atoms/Label/Label.stories',
     '../components/atoms/Link/Link.stories',
+    '../components/atoms/ScreenTitle/ScreenTitle.stories',
+    '../components/molecules/CustomInputLabel/CustomInputLabel.stories',
 ];
 
 module.exports = {

@@ -24,6 +24,7 @@ exports[`Button Atom Component Snapshot 1`] = `
         "height": 45,
         "justifyContent": "center",
         "margin": 10,
+        "opacity": 0.5,
         "padding": 10,
         "width": 45,
       },

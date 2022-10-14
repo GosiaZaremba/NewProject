@@ -10,6 +10,7 @@ export type Props = {
     iconSize: number;
     iconBorderColor: string;
     testID?: string;
+    testOnly_pressed: boolean;
 };
 
 export const CustomIcon: React.FC<Props> = ({
@@ -19,6 +20,7 @@ export const CustomIcon: React.FC<Props> = ({
     iconSize,
     iconBorderColor,
     testID,
+    testOnly_pressed,
 }) => {
     return (
         <Pressable
@@ -29,6 +31,7 @@ export const CustomIcon: React.FC<Props> = ({
                     ? [styles.pressed, { borderColor: iconBorderColor }]
                     : [styles.pressable, { borderColor: iconBorderColor }]
             }
+            testOnly_pressed={testOnly_pressed}
         >
             <Icon
                 name={iconName}

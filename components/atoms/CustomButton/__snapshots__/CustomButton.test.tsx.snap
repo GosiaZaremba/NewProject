@@ -19,6 +19,7 @@ exports[`Button Atom Component Snapshot 1`] = `
       "opacity": 1,
     }
   }
+  testID="atom-button"
 >
   <View
     style={

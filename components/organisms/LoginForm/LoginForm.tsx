@@ -73,7 +73,6 @@ export const LoginForm: React.FC<Props> = ({ onSubmitForm }) => {
                     title={'Login'}
                     onPress={onSubmit}
                     color={Colors.pink}
-                    testID={'LoginButton'}
                 />
             </View>
         </View>

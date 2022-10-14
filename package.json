@@ -9,7 +9,7 @@
         "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
         "prestorybook": "rnstl",
         "build-storybook": "build-storybook",
-        "storybook": "start-storybook -p 7007 h- 192.168.2.163",
+        "storybook": "start-storybook -p 7007",
         "test": "jest -u",
         "test:coverage": "jest -u --coverage --watchAll=false"
     },
@@ -23,6 +23,7 @@
         }
     },
     "dependencies": {
+        "@react-native-community/slider": "^4.3.2",
         "@storybook/addon-actions": "^6.5.12",
         "@storybook/addon-knobs": "^6.4.0",
         "@storybook/addon-links": "^6.5.12",
