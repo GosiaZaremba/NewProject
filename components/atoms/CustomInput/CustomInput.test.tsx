@@ -36,6 +36,6 @@ describe('Button Atom', () => {
         expect(customInput.props.placeholder).toEqual('Custom Input');
         expect(customInput.props.secureTextEntry).toEqual(false);
         // expect(customInput.props.onChangeText()).toHaveReturned();
-        console.log(customInput);
+        console.log(customInput.props.ref);
     });
 });

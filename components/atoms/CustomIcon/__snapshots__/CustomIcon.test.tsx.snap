@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button Atom Component Snapshot 1`] = `
+exports[`CustomIcon Atom Component Snapshot 1`] = `
 <View
   accessible={true}
   collapsable={false}

@@ -24,6 +24,7 @@ export const SocialLogin: React.FC<Props> = ({
                 iconSize={20}
                 iconBorderColor={Colors.red}
                 testID={'googleIcon'}
+                testOnly_pressed={true}
             />
             <CustomIcon
                 onPressIcon={onPressFacebook}
@@ -32,6 +33,7 @@ export const SocialLogin: React.FC<Props> = ({
                 iconSize={20}
                 iconBorderColor={Colors.navy}
                 testID={'facebookIcon'}
+                testOnly_pressed={true}
             />
             <CustomIcon
                 onPressIcon={onPressLinkedin}
@@ -40,6 +42,7 @@ export const SocialLogin: React.FC<Props> = ({
                 iconSize={20}
                 iconBorderColor={Colors.blue}
                 testID={'linkedinIcon'}
+                testOnly_pressed={true}
             />
         </View>
     );

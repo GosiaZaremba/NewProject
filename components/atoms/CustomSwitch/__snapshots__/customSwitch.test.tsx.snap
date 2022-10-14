@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch Atom Component Snapshot 1`] = `
+<RCTSwitch
+  accessibilityRole="switch"
+  onChange={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onTintColor="#fc296f"
+  style={
+    Object {
+      "height": 31,
+      "width": 51,
+    }
+  }
+  testID="atom-switch"
+  thumbTintColor="#908D8E"
+  tintColor="#908D8E"
+  value={false}
+/>
+`;

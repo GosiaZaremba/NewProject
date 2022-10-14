@@ -26,8 +26,8 @@ const CustomInputWithReference: React.ForwardRefRenderFunction<
 
     const inputReference = useRef<TextInput>(null);
 
-    const onChangeText = (value: string) => {
-        setValue(value);
+    const onChangeText = (val: string) => {
+        setValue(val);
     };
 
     useImperativeHandle(ref, () => ({

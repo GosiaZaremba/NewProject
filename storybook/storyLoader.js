@@ -13,6 +13,9 @@ function loadStories() {
     require('../components/atoms/Link/Link.stories');
     require('../components/atoms/ScreenTitle/ScreenTitle.stories');
     require('../components/molecules/CustomInputLabel/CustomInputLabel.stories');
+    require('../components/molecules/CustomSwitchLabel/CustomSwitchLabel.stories');
+    require('../components/organisms/LoginForm/LoginForm.stories');
+    require('../components/organisms/SocialLogin/SocialLogin.stories');
 }
 
 const stories = [
@@ -25,6 +28,9 @@ const stories = [
     '../components/atoms/Link/Link.stories',
     '../components/atoms/ScreenTitle/ScreenTitle.stories',
     '../components/molecules/CustomInputLabel/CustomInputLabel.stories',
+    '../components/molecules/CustomSwitchLabel/CustomSwitchLabel.stories',
+    '../components/organisms/LoginForm/LoginForm.stories',
+    '../components/organisms/SocialLogin/SocialLogin.stories',
 ];
 
 module.exports = {

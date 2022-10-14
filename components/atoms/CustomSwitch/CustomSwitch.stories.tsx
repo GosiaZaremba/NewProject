@@ -8,9 +8,10 @@ storiesOf('atoms/CustomSwitch', module)
     .addDecorator((story) => story())
     .add('default', () => (
         <CustomSwitch
-            trackColorFalse={color('trackColorFalse', Colors.pink)}
+            trackColorFalse={color('trackColorFalse', Colors.grey)}
             trackColorTrue={color('trackColorTrue', Colors.pink)}
-            thumbColorOn={color('thumbColorOn', Colors.pink)}
-            thumbColorOff={color('thumbColorOff', Colors.pink)}
+            thumbColorOn={color('thumbColorOn', Colors.grey)}
+            thumbColorOff={color('thumbColorOff', Colors.grey)}
+            testID={'atom-switch'}
         />
     ));
