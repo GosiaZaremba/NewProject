@@ -1,20 +1,7 @@
 import React from 'react';
 import {LoginTemplate} from '../../components/templates';
 
-export type Props = {
-  onSubmitForm: (
-    email: string,
-    password: string,
-    rememberMe: boolean | undefined,
-  ) => void;
-  onPressGoogle: () => void;
-  onPressFacebook: () => void;
-  onPressForgotPassword: () => void;
-  onPressNavigateSignup: () => void;
-  onPressLinkedin: () => void;
-};
-
-export const LoginScreen: React.FC<Props> = () => {
+export const LoginScreen: React.FC = () => {
   const onSubmitForm = (
     email: string,
     password: string,
