@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Switch Atom Component Snapshot 1`] = `
+exports[`Atom Switch Component Snapshot 1`] = `
 <RCTSwitch
   accessibilityRole="switch"
   onChange={[Function]}

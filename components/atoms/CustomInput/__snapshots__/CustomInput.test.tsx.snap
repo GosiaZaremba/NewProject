@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button Atom Component Snapshot 1`] = `
+exports[`Atom Input Component Snapshot 1`] = `
 <TextInput
   onChangeText={[Function]}
   placeholder="Custom Input"

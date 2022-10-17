@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atom Divider Component Snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "borderColor": "#908D8E",
+      "borderRadius": 5,
+      "borderWidth": 1,
+      "height": 1,
+      "justifyContent": "center",
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#F5F0F2",
+        "borderColor": "#908D8E",
+        "borderRadius": 5,
+        "borderWidth": 1,
+        "padding": 5,
+        "position": "absolute",
+      }
+    }
+    testID="atom-divider"
+  >
+    <Text>
+      Divider text
+    </Text>
+  </View>
+</View>
+`;

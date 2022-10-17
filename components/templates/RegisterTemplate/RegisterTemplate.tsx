@@ -25,7 +25,7 @@ export const RegisterTemplate: React.FC<Props> = ({
             <ScreenTitle screenTitle={'SIGN UP'} />
             <RegisterForm onSubmitForm={onSubmitForm} />
             <View style={styles.divider}>
-                <Divider text={'OR'} />
+                <Divider text={'OR'} testID={'template-divider'} />
             </View>
             <SocialLogin
                 onPressFacebook={onPressFacebook}

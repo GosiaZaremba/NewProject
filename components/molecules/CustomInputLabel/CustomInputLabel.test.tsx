@@ -4,16 +4,17 @@ import '@testing-library/jest-native';
 import renderer from 'react-test-renderer';
 
 import 'react-native';
-import { CustomInput } from './CustomInput';
+import { CustomInputLabel } from './CustomInputLabel';
 
 describe('Atom Input', () => {
     test('Component Snapshot', () => {
         const tree = renderer
             .create(
-                <CustomInput
+                <CustomInputLabel
                     placeholder={'Custom Input'}
                     secureTextEntry={false}
-                    testID={'atom-input'}
+                    testID={'molecule-inputLabel'}
+                    labelText={'LabelText'}
                 />
             )
             .toJSON();
@@ -22,13 +23,14 @@ describe('Atom Input', () => {
 
     test('ensure variants works correctly', () => {
         const { getByTestId } = render(
-            <CustomInput
+            <CustomInputLabel
                 placeholder={'Custom Input'}
                 secureTextEntry={false}
-                testID={'atom-input'}
+                testID={'molecule-inputLabel'}
+                labelText={'LabelText'}
             />
         );
-        const customInput = getByTestId('atom-input');
+        const customInput = getByTestId('molecule-inputLabel');
         fireEvent.changeText(customInput, '123');
         expect(customInput.props.value).toBe('123');
         expect(customInput.props.placeholder).toEqual('Custom Input');

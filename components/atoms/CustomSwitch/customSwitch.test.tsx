@@ -9,7 +9,7 @@ import { Colors } from '../../../constants/colors';
 
 const mockOnPress = jest.fn();
 
-describe('Switch Atom', () => {
+describe('Atom Switch', () => {
     test('Component Snapshot', () => {
         const tree = renderer
             .create(
@@ -37,10 +37,12 @@ describe('Switch Atom', () => {
         );
         const customSwitch = getByTestId('atom-switch');
 
-        // expect(customInput.props.value).toBe('123');
+        expect(customSwitch.props.value).toBe(false);
+        // expect(customSwitch.props.onStartShouldSetResponder).toReturn();
+        fireEvent(customSwitch, 'onValueChange', { value: true });
         // expect(customInput.props.placeholder).toEqual('Custom Input');
         // expect(customInput.props.secureTextEntry).toEqual(false);
         // expect(customInput.props.onChangeText()).toHaveReturned();
-        console.log(customSwitch);
+        console.log(customSwitch.props.onValueChange);
     });
 });
