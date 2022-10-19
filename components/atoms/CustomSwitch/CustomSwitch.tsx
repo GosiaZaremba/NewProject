@@ -12,6 +12,7 @@ export type Props = {
     thumbColorOn: string;
     thumbColorOff: string;
     testID?: string;
+    ref: boolean;
 };
 
 export type CustomSwitchReference = {
@@ -30,8 +31,7 @@ export const CustomSwitchWithReference: React.ForwardRefRenderFunction<
 
     const switchReference = useRef<Switch>(null);
 
-    const toggleSwitch = (remember: boolean) =>
-        setRemember((remember) => !remember);
+    const toggleSwitch = () => setRemember((remember) => !remember);
 
     useImperativeHandle(ref, () => ({
         getValue: () => {

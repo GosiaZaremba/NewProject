@@ -1,24 +1,23 @@
 import { fireEvent, render, screen } from '@testing-library/react-native';
 import React from 'react';
 import '@testing-library/jest-native';
-import renderer, { act } from 'react-test-renderer';
+import renderer from 'react-test-renderer';
+
 import 'react-native';
-import { CustomSwitch } from './CustomSwitch';
+import { CustomSwitchLabel } from './CustomSwitchLabel';
 import { Colors } from '../../../constants/colors';
-import { CustomSwitchReference } from '../index';
 
-const mockOnPress = jest.fn();
-
-describe('Atom Switch', () => {
+describe('Molecule SwitchLabel', () => {
     test('Component Snapshot', () => {
         const tree = renderer
             .create(
-                <CustomSwitch
+                <CustomSwitchLabel
                     trackColorFalse={Colors.grey}
                     trackColorTrue={Colors.pink}
                     thumbColorOn={Colors.grey}
                     thumbColorOff={Colors.grey}
-                    testID={'atom-switch'}
+                    labelText={'Molecule switch label'}
+                    testID={'molecule-switchLabel'}
                 />
             )
             .toJSON();
@@ -27,21 +26,21 @@ describe('Atom Switch', () => {
 
     test('ensure variants works correctly', () => {
         const { getByTestId } = render(
-            <CustomSwitch
+            <CustomSwitchLabel
                 trackColorFalse={Colors.grey}
                 trackColorTrue={Colors.pink}
                 thumbColorOn={Colors.grey}
                 thumbColorOff={Colors.grey}
-                testID={'atom-switch'}
+                labelText={'Molecule switch label'}
+                testID={'molecule-switchLabel'}
             />
         );
-        const customSwitch = getByTestId('atom-switch');
-
-        expect(customSwitch.props.value).toBe(false);
-        fireEvent(customSwitch, 'onValueChange', { value: true });
-        // expect(customInput.props.placeholder).toEqual('Custom Input');
-        // expect(customInput.props.secureTextEntry).toEqual(false);
+        const customSwitchLabel = getByTestId('molecule-switchLabel');
+        // fireEvent.changeText(customInputLabel, '123');
+        // expect(customInputLabel.props.value).toBe('123');
+        // expect(customInputLabel.props.placeholder).toEqual('Custom InputLabel');
+        // expect(customInputLabel.props.secureTextEntry).toEqual(false);
         // expect(customInput.props.onChangeText()).toHaveReturned();
-        // console.log(customSwitch);
+        // console.log(customSwitchLabel.props);
     });
 });
