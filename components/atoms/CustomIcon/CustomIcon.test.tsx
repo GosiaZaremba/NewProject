@@ -9,7 +9,7 @@ import { Colors } from '../../../constants/colors';
 
 const mockOnPress = jest.fn();
 
-describe('CustomIcon Atom', () => {
+describe('Atom CustomIcon', () => {
     test('Component Snapshot', () => {
         const tree = renderer
             .create(

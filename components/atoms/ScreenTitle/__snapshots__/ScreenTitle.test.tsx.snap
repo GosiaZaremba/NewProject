@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atom ScreenTitle Component Snapshot 1`] = `
+<Text
+  style={
+    Object {
+      "color": "black",
+      "fontSize": 20,
+      "fontWeight": "700",
+    }
+  }
+  testID="atom-screenTtile"
+>
+  ScreenTtile text
+</Text>
+`;

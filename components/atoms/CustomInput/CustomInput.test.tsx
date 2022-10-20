@@ -5,10 +5,8 @@ import renderer from 'react-test-renderer';
 
 import 'react-native';
 import { CustomInput } from './CustomInput';
-import { Colors } from '../../../constants/colors';
-import { Value } from 'react-native-reanimated';
 
-describe('Button Atom', () => {
+describe('Atom Input', () => {
     test('Component Snapshot', () => {
         const tree = renderer
             .create(
@@ -36,6 +34,6 @@ describe('Button Atom', () => {
         expect(customInput.props.placeholder).toEqual('Custom Input');
         expect(customInput.props.secureTextEntry).toEqual(false);
         // expect(customInput.props.onChangeText()).toHaveReturned();
-        console.log(customInput.props.ref);
+        // console.log(customInput.props.ref);
     });
 });

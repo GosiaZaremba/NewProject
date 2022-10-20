@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Molecule InputLabel Component Snapshot 1`] = `
+<View
+  testID="molecule-inputLabel"
+>
+  <Text
+    style={
+      Object {
+        "color": "black",
+        "marginBottom": 2,
+      }
+    }
+  >
+    LabelText
+  </Text>
+  <TextInput
+    onChangeText={[Function]}
+    placeholder="Custom InputLabel"
+    secureTextEntry={false}
+    style={
+      Object {
+        "borderColor": "#908D8E",
+        "borderRadius": 5,
+        "borderWidth": 1,
+        "padding": 10,
+        "width": "100%",
+      }
+    }
+    value=""
+  />
+</View>
+`;

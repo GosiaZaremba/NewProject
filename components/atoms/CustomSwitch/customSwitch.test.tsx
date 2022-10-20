@@ -1,15 +1,15 @@
 import { fireEvent, render, screen } from '@testing-library/react-native';
 import React from 'react';
 import '@testing-library/jest-native';
-import renderer from 'react-test-renderer';
-
+import renderer, { act } from 'react-test-renderer';
 import 'react-native';
 import { CustomSwitch } from './CustomSwitch';
 import { Colors } from '../../../constants/colors';
+import { CustomSwitchReference } from '../index';
 
 const mockOnPress = jest.fn();
 
-describe('Switch Atom', () => {
+describe('Atom Switch', () => {
     test('Component Snapshot', () => {
         const tree = renderer
             .create(
@@ -37,10 +37,11 @@ describe('Switch Atom', () => {
         );
         const customSwitch = getByTestId('atom-switch');
 
-        // expect(customInput.props.value).toBe('123');
+        expect(customSwitch.props.value).toBe(false);
+        fireEvent(customSwitch, 'onValueChange', { value: true });
         // expect(customInput.props.placeholder).toEqual('Custom Input');
         // expect(customInput.props.secureTextEntry).toEqual(false);
         // expect(customInput.props.onChangeText()).toHaveReturned();
-        console.log(customSwitch);
+        // console.log(customSwitch);
     });
 });

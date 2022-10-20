@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/13</span>
+                <span class='fraction'>0/15</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>0/14</span>
             </div>
         
             
@@ -104,10 +104,8 @@
 <a name='L39'></a><a href='#L39'>39</a>
 <a name='L40'></a><a href='#L40'>40</a>
 <a name='L41'></a><a href='#L41'>41</a>
-<a name='L42'></a><a href='#L42'>42</a>
-<a name='L43'></a><a href='#L43'>43</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L42'></a><a href='#L42'>42</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -122,73 +120,72 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import React from 'react';</span>
-<span class="cstat-no" title="statement not covered" >import {View} from 'react-native';</span>
-import {Colors} from '../../../constants/colors';
-<span class="cstat-no" title="statement not covered" >import {Label, ScreenTitle, Link, Divider} from '../../atoms';</span>
-<span class="cstat-no" title="statement not covered" >import {SocialLogin} from '../../organisms/SocialLogin/SocialLogin';</span>
-<span class="cstat-no" title="statement not covered" >import {RegisterForm} from '../../organisms';</span>
-<span class="cstat-no" title="statement not covered" >import styles from './RegisterTemplate.styles';</span>
+<span class="cstat-no" title="statement not covered" >import { View } from 'react-native';</span>
+<span class="cstat-no" title="statement not covered" >import { Label, ScreenTitle, Link, Divider } from '../../atoms';</span>
+<span class="cstat-no" title="statement not covered" >import { SocialLogin } from '../../organisms/SocialLogin/SocialLogin';</span>
+<span class="cstat-no" title="statement not covered" >import { RegisterForm } from '../../organisms';</span>
+<span class="cstat-no" title="statement not covered" >import styles from './RegisterTemplate.styles';<span class="cstat-no" title="statement not covered" ></span></span>
 &nbsp;
 export type Props = {
-  onSubmitForm: (email: string, password: string) =&gt; void;
-  onPressGoogle: () =&gt; void;
-  onPressFacebook: () =&gt; void;
-  onPressNavigateLogin: () =&gt; void;
-  onPressLinkedin: () =&gt; void;
+    onSubmitForm: (email: string, password: string) =&gt; void;
+    onPressGoogle: () =&gt; void;
+    onPressFacebook: () =&gt; void;
+    onPressNavigateLogin: () =&gt; void;
+    onPressLinkedin: () =&gt; void;
 };
 &nbsp;
 export const <span class="fstat-no" title="function not covered" >RegisterTemplate:</span> React.FC&lt;Props&gt; = <span class="cstat-no" title="statement not covered" >({</span>
-  onSubmitForm,
-  onPressFacebook,
-  onPressGoogle,
-  onPressNavigateLogin,
-  onPressLinkedin,
-}) =&gt;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" > {</span></span></span></span></span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
-    &lt;View style={styles.mainContainer}&gt;
-      &lt;ScreenTitle screenTitle={'SIGN UP'} /&gt;
-      &lt;RegisterForm onSubmitForm={onSubmitForm} /&gt;
-      &lt;View style={styles.divider}&gt;
-        &lt;Divider text={'OR'} /&gt;
-      &lt;/View&gt;
-      &lt;SocialLogin
-        onPressFacebook={onPressFacebook}
-        onPressGoogle={onPressGoogle}
-        onPressLinkedin={onPressLinkedin}
-      /&gt;
-      &lt;View style={styles.footer}&gt;
-        &lt;Label text={'Already a user? '} /&gt;
-        &lt;Link text={'LOGIN'} onPress={onPressNavigateLogin} /&gt;
-      &lt;/View&gt;
-    &lt;/View&gt;
-  );
-};
+    onSubmitForm<span class="cstat-no" title="statement not covered" >,</span>
+    onPressFacebook<span class="cstat-no" title="statement not covered" >,</span>
+    onPressGoogle<span class="cstat-no" title="statement not covered" >,</span>
+    onPressNavigateLogin<span class="cstat-no" title="statement not covered" >,</span>
+    onPressLinkedin<span class="cstat-no" title="statement not covered" >,</span>
+}) =&gt; {
+<span class="cstat-no" title="statement not covered" >    return (</span>
+        &lt;View style={styles.mainContainer}&gt;
+            &lt;ScreenTitle screenTitle={'SIGN UP'} /&gt;
+            &lt;RegisterForm onSubmitForm={onSubmitForm} /&gt;
+            &lt;View style={styles.divider}&gt;
+                &lt;Divider text={'OR'} testID={'template-divider'} /&gt;
+            &lt;/View&gt;
+            &lt;SocialLogin
+                onPressFacebook={onPressFacebook}
+                onPressGoogle={onPressGoogle}
+                onPressLinkedin={onPressLinkedin}
+            /&gt;
+            &lt;View style={styles.footer}&gt;
+                &lt;Label text={'Already a user? '} /&gt;
+                &lt;Link text={'LOGIN'} onPress={onPressNavigateLogin} /&gt;
+            &lt;/View&gt;
+        &lt;/View&gt;
+    );
+};<span class="cstat-no" title="statement not covered" ></span>
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -196,7 +193,7 @@ export const <span class="fstat-no" title="function not covered" >RegisterTempla
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-10-14T11:26:21.658Z
+                at 2022-10-18T20:23:37.261Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

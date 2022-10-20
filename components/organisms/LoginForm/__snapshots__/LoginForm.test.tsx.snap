@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Organism LoginForm Component Snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+    }
+  }
+  testID="organism-loginForm"
+>
+  <View
+    style={
+      Object {
+        "marginVertical": 5,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginTop": 20,
+        }
+      }
+    >
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "black",
+              "marginBottom": 2,
+            }
+          }
+        >
+          Email
+        </Text>
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="email"
+          secureTextEntry={false}
+          style={
+            Object {
+              "borderColor": "#908D8E",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "padding": 10,
+              "width": "100%",
+            }
+          }
+          value=""
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginTop": 20,
+        }
+      }
+    >
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "black",
+              "marginBottom": 2,
+            }
+          }
+        >
+          Password
+        </Text>
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="password"
+          secureTextEntry={true}
+          style={
+            Object {
+              "borderColor": "#908D8E",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "padding": 10,
+              "width": "100%",
+            }
+          }
+          value=""
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "flexDirection": "row",
+        "marginTop": 10,
+      }
+    }
+  >
+    <View>
+      <RCTSwitch
+        accessibilityRole="switch"
+        onChange={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        onTintColor="#908D8E"
+        style={
+          Object {
+            "height": 31,
+            "width": 51,
+          }
+        }
+        thumbTintColor="#908D8E"
+        tintColor="#908D8E"
+        value={false}
+      />
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "marginBottom": 2,
+          }
+        }
+      >
+        Remember me?
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 15,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      accessibilityLabel="Login"
+      accessibilityRole="button"
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#007AFF",
+                "fontSize": 18,
+                "margin": 8,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#fc296f",
+              },
+            ]
+          }
+        >
+          Login
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

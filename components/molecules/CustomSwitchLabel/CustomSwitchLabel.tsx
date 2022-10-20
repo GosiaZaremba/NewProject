@@ -1,5 +1,6 @@
 import React, { forwardRef, useImperativeHandle, useRef } from 'react';
 import { CustomSwitch, CustomSwitchReference, Label } from '../../atoms';
+import { View } from 'react-native';
 
 export type Props = {
     trackColorFalse: string;
@@ -7,7 +8,7 @@ export type Props = {
     thumbColorOn: string;
     thumbColorOff: string;
     labelText: string;
-    switchTestId?: string;
+    testID?: string;
 };
 
 export type CustomSwitchLabelReference = {
@@ -25,7 +26,7 @@ export const CustomSwitchLabelWithReference: React.ForwardRefRenderFunction<
         thumbColorOn,
         thumbColorOff,
         labelText,
-        switchTestId,
+        testID,
     },
     ref
 ) => {
@@ -39,17 +40,16 @@ export const CustomSwitchLabelWithReference: React.ForwardRefRenderFunction<
         },
     }));
     return (
-        <>
+        <View testID={testID}>
             <CustomSwitch
                 trackColorFalse={trackColorFalse}
                 trackColorTrue={trackColorTrue}
                 thumbColorOn={thumbColorOn}
                 thumbColorOff={thumbColorOff}
                 ref={switchReference}
-                testID={switchTestId}
             />
             <Label text={labelText} />
-        </>
+        </View>
     );
 };
 

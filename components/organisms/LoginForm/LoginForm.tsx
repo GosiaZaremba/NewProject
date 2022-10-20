@@ -16,9 +16,10 @@ export type Props = {
         password: string,
         rememberMe: boolean | undefined
     ) => void;
+    testID?: string;
 };
 
-export const LoginForm: React.FC<Props> = ({ onSubmitForm }) => {
+export const LoginForm: React.FC<Props> = ({ onSubmitForm, testID }) => {
     const emailInputReference = useRef<CustomInputLabelReference>(null);
     const passwordInputReference = useRef<CustomInputLabelReference>(null);
     const rememberMeSwitchReference = useRef<CustomSwitchLabelReference>(null);
@@ -39,7 +40,7 @@ export const LoginForm: React.FC<Props> = ({ onSubmitForm }) => {
     };
 
     return (
-        <View style={styles.outerContainer}>
+        <View style={styles.outerContainer} testID={testID}>
             <View style={styles.inputsContainer}>
                 <View style={styles.inputContainer}>
                     <CustomInputLabel

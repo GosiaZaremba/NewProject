@@ -9,7 +9,7 @@ import { Colors } from '../../../constants/colors';
 
 const mockOnPress = jest.fn();
 
-describe('Button Atom', () => {
+describe('Atom Button', () => {
     beforeEach(() => {
         jest.clearAllMocks();
     });

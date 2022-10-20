@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button Atom Component Snapshot 1`] = `
+exports[`Atom Button Component Snapshot 1`] = `
 <View
   accessibilityLabel="Button title"
   accessibilityRole="button"
