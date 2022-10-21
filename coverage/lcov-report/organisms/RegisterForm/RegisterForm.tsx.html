@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">82.35% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/14</span>
+                <span class='fraction'>14/17</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">42.85% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>6/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/13</span>
+                <span class='fraction'>12/15</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -117,35 +117,29 @@
 <a name='L52'></a><a href='#L52'>52</a>
 <a name='L53'></a><a href='#L53'>53</a>
 <a name='L54'></a><a href='#L54'>54</a>
-<a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a>
-<a name='L57'></a><a href='#L57'>57</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L55'></a><a href='#L55'>55</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">157x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -175,49 +169,49 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import React, { useRef } from 'react';</span>
-<span class="cstat-no" title="statement not covered" >import { View, Switch } from 'react-native';</span>
-<span class="cstat-no" title="statement not covered" >import { Colors } from '../../../constants/colors';</span>
-<span class="cstat-no" title="statement not covered" >import {</span>
-    CustomButton,
-    CustomInputReference,
-    Label,
-    CustomInput,
-} from '../../atoms';
-<span class="cstat-no" title="statement not covered" >import styles from './RegisterForm.styles';</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useRef } from 'react';
+import { View } from 'react-native';
+import { Colors } from '../../../constants/colors';
+import { CustomButton, CustomInputReference } from '../../atoms';
+import { CustomInputLabel } from '../../molecules';
+import styles from './RegisterForm.styles';
 &nbsp;
 export type Props = {
     onSubmitForm: (email: string, password: string) =&gt; void;
 };
 &nbsp;
-export const <span class="fstat-no" title="function not covered" >RegisterForm:</span> React.FC&lt;Props&gt; = <span class="cstat-no" title="statement not covered" >({ onSubmitForm }) =&gt;<span class="cstat-no" title="statement not covered" > {</span></span>
-    const emailInputReference = <span class="cstat-no" title="statement not covered" >useRef&lt;CustomInputReference&gt;(n</span>ull);
-    const passwordInputReference = <span class="cstat-no" title="statement not covered" >useRef&lt;CustomInputReference&gt;(n</span>ull);
+export const RegisterForm: React.FC&lt;Props&gt; = ({ onSubmitForm }) =&gt; {
+    const emailInputReference = useRef&lt;CustomInputReference&gt;(null);
+    const passwordInputReference = useRef&lt;CustomInputReference&gt;(null);
 &nbsp;
-    const <span class="fstat-no" title="function not covered" >onSubmit </span>= <span class="cstat-no" title="statement not covered" >() =&gt; {</span>
+    const <span class="fstat-no" title="function not covered" >onSubmit </span>= () =&gt; {
         const emailValue = <span class="cstat-no" title="statement not covered" >emailInputReference.current?.getValue() || '';</span>
         const passwordValue = <span class="cstat-no" title="statement not covered" >passwordInputReference.current?.getValue() || '';</span>
         // console.log('email', emailValue, 'password', passwordValue);
-<span class="cstat-no" title="statement not covered" >        onSubmitForm(</span>emailValue, passwordValue);
+<span class="cstat-no" title="statement not covered" >        onSubmitForm(emailValue, passwordValue);</span>
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return (</span>
+    return (
         &lt;View style={styles.outerContainer}&gt;
             &lt;View style={styles.inputsContainer}&gt;
                 &lt;View style={styles.inputContainer}&gt;
-                    &lt;Label text={'Email'} /&gt;
-                    &lt;CustomInput
+                    &lt;CustomInputLabel
+                        labelText={'Email'}
                         placeholder={'email'}
                         secureTextEntry={false}
                         ref={emailInputReference}
+                        testID={'email-input'}
                     /&gt;
                 &lt;/View&gt;
                 &lt;View style={styles.inputContainer}&gt;
-                    &lt;Label text={'Password'} /&gt;
-                    &lt;CustomInput
+                    &lt;CustomInputLabel
+                        labelText={'Password'}
                         placeholder={'password'}
                         secureTextEntry={true}
                         ref={passwordInputReference}
+                        testID={'password-input'}
                     /&gt;
                 &lt;/View&gt;
             &lt;/View&gt;
@@ -238,7 +232,7 @@ export const <span class="fstat-no" title="function not covered" >RegisterForm:<
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-10-18T20:23:37.261Z
+                at 2022-10-21T14:05:03.342Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

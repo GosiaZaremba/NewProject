@@ -30,12 +30,13 @@ export const CustomInputLabelWithReference: React.ForwardRefRenderFunction<
     }));
 
     return (
-        <View testID={testID}>
-            <Label text={labelText} />
+        <View>
+            <Label text={labelText} testID={`${testID}-label`} />
             <CustomInput
                 placeholder={placeholder}
                 secureTextEntry={secureTextEntry}
                 ref={inputReference}
+                testID={`${testID}-input`}
             />
         </View>
     );

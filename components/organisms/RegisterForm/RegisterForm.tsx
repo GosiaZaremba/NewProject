@@ -1,12 +1,8 @@
 import React, { useRef } from 'react';
-import { View, Switch } from 'react-native';
+import { View } from 'react-native';
 import { Colors } from '../../../constants/colors';
-import {
-    CustomButton,
-    CustomInputReference,
-    Label,
-    CustomInput,
-} from '../../atoms';
+import { CustomButton, CustomInputReference } from '../../atoms';
+import { CustomInputLabel } from '../../molecules';
 import styles from './RegisterForm.styles';
 
 export type Props = {
@@ -28,19 +24,21 @@ export const RegisterForm: React.FC<Props> = ({ onSubmitForm }) => {
         <View style={styles.outerContainer}>
             <View style={styles.inputsContainer}>
                 <View style={styles.inputContainer}>
-                    <Label text={'Email'} />
-                    <CustomInput
+                    <CustomInputLabel
+                        labelText={'Email'}
                         placeholder={'email'}
                         secureTextEntry={false}
                         ref={emailInputReference}
+                        testID={'email-input'}
                     />
                 </View>
                 <View style={styles.inputContainer}>
-                    <Label text={'Password'} />
-                    <CustomInput
+                    <CustomInputLabel
+                        labelText={'Password'}
                         placeholder={'password'}
                         secureTextEntry={true}
                         ref={passwordInputReference}
+                        testID={'password-input'}
                     />
                 </View>
             </View>

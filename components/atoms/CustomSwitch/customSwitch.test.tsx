@@ -7,8 +7,6 @@ import { CustomSwitch } from './CustomSwitch';
 import { Colors } from '../../../constants/colors';
 import { CustomSwitchReference } from '../index';
 
-const mockOnPress = jest.fn();
-
 describe('Atom Switch', () => {
     test('Component Snapshot', () => {
         const tree = renderer
@@ -39,9 +37,22 @@ describe('Atom Switch', () => {
 
         expect(customSwitch.props.value).toBe(false);
         fireEvent(customSwitch, 'onValueChange', { value: true });
-        // expect(customInput.props.placeholder).toEqual('Custom Input');
-        // expect(customInput.props.secureTextEntry).toEqual(false);
-        // expect(customInput.props.onChangeText()).toHaveReturned();
-        // console.log(customSwitch);
+    });
+    test('ensure reference is passed', () => {
+        const switchRef = React.createRef<CustomSwitchReference>();
+        const { getByTestId } = render(
+            <CustomSwitch
+                trackColorFalse={Colors.grey}
+                trackColorTrue={Colors.pink}
+                thumbColorOn={Colors.grey}
+                thumbColorOff={Colors.grey}
+                testID={'atom-switch'}
+                ref={switchRef}
+            />
+        );
+
+        const customSwitch = getByTestId('atom-switch');
+        fireEvent(customSwitch, 'onValueChange', { value: true });
+        expect(switchRef.current?.getValue()).toBe(true);
     });
 });
