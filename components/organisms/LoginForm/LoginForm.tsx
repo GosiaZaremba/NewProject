@@ -40,7 +40,7 @@ export const LoginForm: React.FC<Props> = ({ onSubmitForm, testID }) => {
     };
 
     return (
-        <View style={styles.outerContainer} testID={testID}>
+        <View style={styles.outerContainer}>
             <View style={styles.inputsContainer}>
                 <View style={styles.inputContainer}>
                     <CustomInputLabel
@@ -48,6 +48,7 @@ export const LoginForm: React.FC<Props> = ({ onSubmitForm, testID }) => {
                         placeholder={'email'}
                         secureTextEntry={false}
                         ref={emailInputReference}
+                        testID={'email-input'}
                     />
                 </View>
                 <View style={styles.inputContainer}>
@@ -56,6 +57,7 @@ export const LoginForm: React.FC<Props> = ({ onSubmitForm, testID }) => {
                         placeholder={'password'}
                         secureTextEntry={true}
                         ref={passwordInputReference}
+                        testID={'password-input'}
                     />
                 </View>
             </View>
@@ -74,6 +76,7 @@ export const LoginForm: React.FC<Props> = ({ onSubmitForm, testID }) => {
                     title={'Login'}
                     onPress={onSubmit}
                     color={Colors.pink}
+                    testID={'submit-button'}
                 />
             </View>
         </View>

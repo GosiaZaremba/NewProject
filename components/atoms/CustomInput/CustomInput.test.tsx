@@ -1,10 +1,10 @@
-import { fireEvent, render, screen } from '@testing-library/react-native';
+import { fireEvent, render } from '@testing-library/react-native';
 import React from 'react';
 import '@testing-library/jest-native';
 import renderer from 'react-test-renderer';
 
 import 'react-native';
-import { CustomInput } from './CustomInput';
+import { CustomInput, CustomInputReference } from './CustomInput';
 
 describe('Atom Input', () => {
     test('Component Snapshot', () => {
@@ -31,9 +31,22 @@ describe('Atom Input', () => {
         const customInput = getByTestId('atom-input');
         fireEvent.changeText(customInput, '123');
         expect(customInput.props.value).toBe('123');
-        expect(customInput.props.placeholder).toEqual('Custom Input');
-        expect(customInput.props.secureTextEntry).toEqual(false);
-        // expect(customInput.props.onChangeText()).toHaveReturned();
-        // console.log(customInput.props.ref);
+        expect(customInput.props.placeholder).toBe('Custom Input');
+        expect(customInput.props.secureTextEntry).toBe(false);
+    });
+
+    test('ensure reference is passed', () => {
+        const inputRef = React.createRef<CustomInputReference>();
+        const { getByTestId } = render(
+            <CustomInput
+                placeholder={'Custom Input'}
+                secureTextEntry={false}
+                testID={'atom-input'}
+                ref={inputRef}
+            />
+        );
+        const customInput = getByTestId('atom-input');
+        fireEvent.changeText(customInput, 'input content');
+        expect(inputRef.current?.getValue()).toBe('input content');
     });
 });

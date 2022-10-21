@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Organism LoginForm Component Snapshot 1`] = `
+exports[`Organism RegisterForm Component Snapshot 1`] = `
 <View
   style={
     Object {
@@ -94,52 +94,13 @@ exports[`Organism LoginForm Component Snapshot 1`] = `
   <View
     style={
       Object {
-        "alignItems": "center",
-        "alignSelf": "flex-start",
-        "flexDirection": "row",
-        "marginTop": 10,
-      }
-    }
-  >
-    <View>
-      <RCTSwitch
-        accessibilityRole="switch"
-        onChange={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        onTintColor="#908D8E"
-        style={
-          Object {
-            "height": 31,
-            "width": 51,
-          }
-        }
-        thumbTintColor="#908D8E"
-        tintColor="#908D8E"
-        value={false}
-      />
-      <Text
-        style={
-          Object {
-            "color": "black",
-            "marginBottom": 2,
-          }
-        }
-      >
-        Remember me?
-      </Text>
-    </View>
-  </View>
-  <View
-    style={
-      Object {
         "marginVertical": 15,
         "width": "100%",
       }
     }
   >
     <View
-      accessibilityLabel="Login"
+      accessibilityLabel="SIGN UP"
       accessibilityRole="button"
       accessible={true}
       collapsable={false}
@@ -156,7 +117,6 @@ exports[`Organism LoginForm Component Snapshot 1`] = `
           "opacity": 1,
         }
       }
-      testID="submit-button"
     >
       <View
         style={
@@ -180,7 +140,7 @@ exports[`Organism LoginForm Component Snapshot 1`] = `
             ]
           }
         >
-          Login
+          SIGN UP
         </Text>
       </View>
     </View>
