@@ -1,7 +1,7 @@
-import { fireEvent, render, screen } from '@testing-library/react-native';
+import { fireEvent, render } from '@testing-library/react-native';
 import React from 'react';
 import '@testing-library/jest-native';
-import renderer, { act } from 'react-test-renderer';
+import renderer from 'react-test-renderer';
 import 'react-native';
 import { RegisterForm } from './RegisterForm';
 
@@ -10,30 +10,78 @@ const mockOnPress = jest.fn();
 describe('Organism RegisterForm', () => {
     test('Component Snapshot', () => {
         const tree = renderer
-            .create(<RegisterForm onSubmitForm={mockOnPress} />)
+            .create(
+                <RegisterForm
+                    onSubmitForm={mockOnPress}
+                    testID={'organism-registerForm'}
+                />
+            )
             .toJSON();
         expect(tree).toMatchSnapshot();
     });
 
-    test('ensure variants works correctly', () => {
+    test('ensure submit button works correctly', () => {
         const { getByTestId } = render(
-            <RegisterForm onSubmitForm={mockOnPress} />
+            <RegisterForm
+                onSubmitForm={mockOnPress}
+                testID={'organism-registerForm'}
+            />
         );
 
-        // const inputEmail = getByTestId('email-input-input');
-        // const inputPassword = getByTestId('password-input-input');
-        // fireEvent.changeText(inputEmail, 'mail@wp.pl');
-        // expect(inputEmail.props.value).toBe('mail@wp.pl');
-        // fireEvent.changeText(inputPassword, 'haslo');
-        // expect(inputPassword.props.value).toBe('haslo');
+        const submitButton = getByTestId('organism-registerForm-submit-button');
+        fireEvent.press(submitButton);
+        expect(mockOnPress).toHaveBeenCalledTimes(1);
+        expect(submitButton).toHaveTextContent('SIGN UP');
+    });
 
-        // console.log(inputEmail);
-        // console.log(inputPassword);
-        // expect(loginForm.props.value).toBe(false);
-        // fireEvent(loginForm, 'onValueChange', { value: true });
-        // expect(customInput.props.placeholder).toEqual('Custom Input');
-        // expect(customInput.props.secureTextEntry).toEqual(false);
-        // expect(customInput.props.onChangeText()).toHaveReturned();
-        // console.log(loginForm.props);
+    test('ensure email input works correctly', () => {
+        const { getByTestId } = render(
+            <RegisterForm
+                onSubmitForm={mockOnPress}
+                testID={'organism-registerForm'}
+            />
+        );
+
+        const inputEmail = getByTestId(
+            'organism-registerForm-email-input-input'
+        );
+        fireEvent.changeText(inputEmail, 'mail@wp.pl');
+        expect(inputEmail.props.value).toBe('mail@wp.pl');
+    });
+
+    test('ensure password input works correctly', () => {
+        const { getByTestId } = render(
+            <RegisterForm
+                onSubmitForm={mockOnPress}
+                testID={'organism-registerForm'}
+            />
+        );
+
+        const inputPassword = getByTestId(
+            'organism-registerForm-password-input-input'
+        );
+        fireEvent.changeText(inputPassword, 'haslo');
+        expect(inputPassword.props.value).toBe('haslo');
+    });
+
+    test('ensure onSubmitForm works correctly', () => {
+        const { getByTestId } = render(
+            <RegisterForm
+                onSubmitForm={mockOnPress}
+                testID={'organism-registerForm'}
+            />
+        );
+
+        const inputPassword = getByTestId(
+            'organism-registerForm-password-input-input'
+        );
+        const inputEmail = getByTestId(
+            'organism-registerForm-email-input-input'
+        );
+        const submitButton = getByTestId('organism-registerForm-submit-button');
+        fireEvent.changeText(inputPassword, 'haslo');
+        fireEvent.changeText(inputEmail, 'mail@wp.pl');
+        fireEvent.press(submitButton);
+        expect(mockOnPress).toHaveBeenCalledWith('mail@wp.pl', 'haslo');
     });
 });

@@ -33,6 +33,7 @@ exports[`Atom CustomIcon Component Snapshot 1`] = `
       },
     ]
   }
+  testID="undefined-pressable"
 >
   <Text
     allowFontScaling={false}
@@ -54,6 +55,7 @@ exports[`Atom CustomIcon Component Snapshot 1`] = `
         Object {},
       ]
     }
+    testID="undefined-icon"
   >
     
   </Text>

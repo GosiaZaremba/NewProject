@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Organism SocialLogin Component Snapshot 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "marginVertical": 10,
+    }
+  }
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={5}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 50,
+          "borderWidth": 3,
+          "height": 45,
+          "justifyContent": "center",
+          "margin": 10,
+          "opacity": 0.5,
+          "padding": 10,
+          "width": 45,
+        },
+        Object {
+          "borderColor": "#e63039",
+        },
+      ]
+    }
+    testID="organism-socialLogin-google-pressable"
+  >
+    <Text
+      allowFontScaling={false}
+      selectable={false}
+      style={
+        Array [
+          Object {
+            "color": "#e63039",
+            "fontSize": 12,
+          },
+          Object {
+            "fontSize": 20,
+          },
+          Object {
+            "fontFamily": "FontAwesome",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+      testID="organism-socialLogin-google-icon"
+    >
+      
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={5}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 50,
+          "borderWidth": 3,
+          "height": 45,
+          "justifyContent": "center",
+          "margin": 10,
+          "opacity": 0.5,
+          "padding": 10,
+          "width": 45,
+        },
+        Object {
+          "borderColor": "#39539b",
+        },
+      ]
+    }
+    testID="organism-socialLogin-facebook-pressable"
+  >
+    <Text
+      allowFontScaling={false}
+      selectable={false}
+      style={
+        Array [
+          Object {
+            "color": "#39539b",
+            "fontSize": 12,
+          },
+          Object {
+            "fontSize": 20,
+          },
+          Object {
+            "fontFamily": "FontAwesome",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+      testID="organism-socialLogin-facebook-icon"
+    >
+      
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={5}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 50,
+          "borderWidth": 3,
+          "height": 45,
+          "justifyContent": "center",
+          "margin": 10,
+          "opacity": 0.5,
+          "padding": 10,
+          "width": 45,
+        },
+        Object {
+          "borderColor": "#3872c3",
+        },
+      ]
+    }
+    testID="organism-socialLogin-linkedIn-pressable"
+  >
+    <Text
+      allowFontScaling={false}
+      selectable={false}
+      style={
+        Array [
+          Object {
+            "color": "#3872c3",
+            "fontSize": 12,
+          },
+          Object {
+            "fontSize": 20,
+          },
+          Object {
+            "fontFamily": "FontAwesome",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+      testID="organism-socialLogin-linkedIn-icon"
+    >
+      
+    </Text>
+  </View>
+</View>
+`;

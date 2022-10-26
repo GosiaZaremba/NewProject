@@ -33,6 +33,7 @@ describe('Molecule InputLabel', () => {
         const input = getByTestId('molecule-inputLabel-input');
         expect(label.props.children).toBe('LabelText');
         expect(input.props.placeholder).toBe('Custom InputLabel');
+        expect(input.props.secureTextEntry).toBe(false);
     });
 
     test('ensure referance is passed', () => {

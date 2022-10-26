@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Molecule SwitchLabel Component Snapshot 1`] = `
-<View
-  testID="molecule-switchLabel"
->
+<View>
   <RCTSwitch
     accessibilityRole="switch"
     onChange={[Function]}
@@ -16,6 +14,7 @@ exports[`Molecule SwitchLabel Component Snapshot 1`] = `
         "width": 51,
       }
     }
+    testID="molecule-switch"
     thumbTintColor="#908D8E"
     tintColor="#908D8E"
     value={false}
@@ -27,6 +26,7 @@ exports[`Molecule SwitchLabel Component Snapshot 1`] = `
         "marginBottom": 2,
       }
     }
+    testID="molecule-label"
   >
     Molecule switch label
   </Text>

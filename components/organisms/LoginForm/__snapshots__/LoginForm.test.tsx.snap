@@ -31,7 +31,7 @@ exports[`Organism LoginForm Component Snapshot 1`] = `
               "marginBottom": 2,
             }
           }
-          testID="email-input-label"
+          testID="organism-loginForm-email-input-label"
         >
           Email
         </Text>
@@ -48,7 +48,7 @@ exports[`Organism LoginForm Component Snapshot 1`] = `
               "width": "100%",
             }
           }
-          testID="email-input-input"
+          testID="organism-loginForm-email-input-input"
           value=""
         />
       </View>
@@ -68,7 +68,7 @@ exports[`Organism LoginForm Component Snapshot 1`] = `
               "marginBottom": 2,
             }
           }
-          testID="password-input-label"
+          testID="organism-loginForm-password-input-label"
         >
           Password
         </Text>
@@ -85,7 +85,7 @@ exports[`Organism LoginForm Component Snapshot 1`] = `
               "width": "100%",
             }
           }
-          testID="password-input-input"
+          testID="organism-loginForm-password-input-input"
           value=""
         />
       </View>
@@ -114,6 +114,7 @@ exports[`Organism LoginForm Component Snapshot 1`] = `
             "width": 51,
           }
         }
+        testID="organism-loginForm-login-switch-switch"
         thumbTintColor="#908D8E"
         tintColor="#908D8E"
         value={false}
@@ -125,6 +126,7 @@ exports[`Organism LoginForm Component Snapshot 1`] = `
             "marginBottom": 2,
           }
         }
+        testID="organism-loginForm-login-switch-label"
       >
         Remember me?
       </Text>
@@ -156,7 +158,7 @@ exports[`Organism LoginForm Component Snapshot 1`] = `
           "opacity": 1,
         }
       }
-      testID="submit-button"
+      testID="organism-loginForm-submit-button"
     >
       <View
         style={

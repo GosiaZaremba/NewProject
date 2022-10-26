@@ -40,15 +40,16 @@ export const CustomSwitchLabelWithReference: React.ForwardRefRenderFunction<
         },
     }));
     return (
-        <View testID={testID}>
+        <View>
             <CustomSwitch
                 trackColorFalse={trackColorFalse}
                 trackColorTrue={trackColorTrue}
                 thumbColorOn={thumbColorOn}
                 thumbColorOff={thumbColorOff}
                 ref={switchReference}
+                testID={`${testID}-switch`}
             />
-            <Label text={labelText} />
+            <Label text={labelText} testID={`${testID}-label`} />
         </View>
     );
 };
