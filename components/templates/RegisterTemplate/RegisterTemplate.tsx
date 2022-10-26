@@ -11,6 +11,7 @@ export type Props = {
     onPressFacebook: () => void;
     onPressNavigateLogin: () => void;
     onPressLinkedin: () => void;
+    testID?: string;
 };
 
 export const RegisterTemplate: React.FC<Props> = ({
@@ -19,22 +20,31 @@ export const RegisterTemplate: React.FC<Props> = ({
     onPressGoogle,
     onPressNavigateLogin,
     onPressLinkedin,
+    testID,
 }) => {
     return (
         <View style={styles.mainContainer}>
-            <ScreenTitle screenTitle={'SIGN UP'} />
-            <RegisterForm onSubmitForm={onSubmitForm} />
+            <ScreenTitle
+                screenTitle={'SIGN UP'}
+                testID={`${testID}-screenTitile`}
+            />
+            <RegisterForm onSubmitForm={onSubmitForm} testID={`${testID}`} />
             <View style={styles.divider}>
-                <Divider text={'OR'} testID={'template-divider'} />
+                <Divider text={'OR'} testID={`${testID}-divider`} />
             </View>
             <SocialLogin
                 onPressFacebook={onPressFacebook}
                 onPressGoogle={onPressGoogle}
                 onPressLinkedin={onPressLinkedin}
+                testID={`${testID}`}
             />
             <View style={styles.footer}>
-                <Label text={'Already a user? '} />
-                <Link text={'LOGIN'} onPress={onPressNavigateLogin} />
+                <Label text={'Already a user? '} testID={`${testID}-label`} />
+                <Link
+                    text={'LOGIN'}
+                    onPress={onPressNavigateLogin}
+                    testID={`${testID}-link`}
+                />
             </View>
         </View>
     );

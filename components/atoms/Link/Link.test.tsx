@@ -30,8 +30,8 @@ describe('Atom Link', () => {
         );
 
         const link = getByTestId('atom-link');
+        expect(link).toHaveTextContent('Link text');
         fireEvent.press(link);
         expect(mockOnPress).toHaveBeenCalledTimes(1);
-        expect(link).toHaveTextContent('Link text');
     });
 });

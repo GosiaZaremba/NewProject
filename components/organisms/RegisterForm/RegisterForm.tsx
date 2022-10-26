@@ -7,9 +7,10 @@ import styles from './RegisterForm.styles';
 
 export type Props = {
     onSubmitForm: (email: string, password: string) => void;
+    testID?: string;
 };
 
-export const RegisterForm: React.FC<Props> = ({ onSubmitForm }) => {
+export const RegisterForm: React.FC<Props> = ({ onSubmitForm, testID }) => {
     const emailInputReference = useRef<CustomInputReference>(null);
     const passwordInputReference = useRef<CustomInputReference>(null);
 
@@ -29,7 +30,7 @@ export const RegisterForm: React.FC<Props> = ({ onSubmitForm }) => {
                         placeholder={'email'}
                         secureTextEntry={false}
                         ref={emailInputReference}
-                        testID={'email-input'}
+                        testID={`${testID}-email-input`}
                     />
                 </View>
                 <View style={styles.inputContainer}>
@@ -38,7 +39,7 @@ export const RegisterForm: React.FC<Props> = ({ onSubmitForm }) => {
                         placeholder={'password'}
                         secureTextEntry={true}
                         ref={passwordInputReference}
-                        testID={'password-input'}
+                        testID={`${testID}-password-input`}
                     />
                 </View>
             </View>
@@ -47,6 +48,7 @@ export const RegisterForm: React.FC<Props> = ({ onSubmitForm }) => {
                     title={'SIGN UP'}
                     onPress={onSubmit}
                     color={Colors.pink}
+                    testID={`${testID}-submit-button`}
                 />
             </View>
         </View>

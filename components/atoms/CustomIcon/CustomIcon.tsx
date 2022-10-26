@@ -32,12 +32,13 @@ export const CustomIcon: React.FC<Props> = ({
                     : [styles.pressable, { borderColor: iconBorderColor }]
             }
             testOnly_pressed={testOnly_pressed}
+            testID={`${testID}-pressable`}
         >
             <Icon
                 name={iconName}
                 style={{ fontSize: iconSize }}
                 color={iconColor}
-                testID={testID}
+                testID={`${testID}-icon`}
             />
         </Pressable>
     );

@@ -8,12 +8,14 @@ export type Props = {
     onPressGoogle: () => void;
     onPressFacebook: () => void;
     onPressLinkedin: () => void;
+    testID?: string;
 };
 
 export const SocialLogin: React.FC<Props> = ({
     onPressFacebook,
     onPressGoogle,
     onPressLinkedin,
+    testID,
 }) => {
     return (
         <View style={styles.socialContainer}>
@@ -23,7 +25,7 @@ export const SocialLogin: React.FC<Props> = ({
                 iconName={'google'}
                 iconSize={20}
                 iconBorderColor={Colors.red}
-                testID={'googleIcon'}
+                testID={`${testID}-google`}
                 testOnly_pressed={true}
             />
             <CustomIcon
@@ -32,7 +34,7 @@ export const SocialLogin: React.FC<Props> = ({
                 iconName={'facebook'}
                 iconSize={20}
                 iconBorderColor={Colors.navy}
-                testID={'facebookIcon'}
+                testID={`${testID}-facebook`}
                 testOnly_pressed={true}
             />
             <CustomIcon
@@ -41,7 +43,7 @@ export const SocialLogin: React.FC<Props> = ({
                 iconName={'linkedin'}
                 iconSize={20}
                 iconBorderColor={Colors.blue}
-                testID={'linkedinIcon'}
+                testID={`${testID}-linkedIn`}
                 testOnly_pressed={true}
             />
         </View>

@@ -30,9 +30,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">68.75% </span>
+                <span class="strong">81.25% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>11/16</span>
+                <span class='fraction'>13/16</span>
             </div>
         
             
@@ -147,17 +147,18 @@
 <a name='L82'></a><a href='#L82'>82</a>
 <a name='L83'></a><a href='#L83'>83</a>
 <a name='L84'></a><a href='#L84'>84</a>
-<a name='L85'></a><a href='#L85'>85</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">157x</span>
+<span class="cline-any cline-yes">471x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -168,15 +169,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -185,10 +186,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">15x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -230,7 +231,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useRef, useState } from 'react';
 import { View } from 'react-native';
 import { Colors } from '../../../constants/colors';
@@ -258,8 +260,8 @@ export const LoginForm: React.FC&lt;Props&gt; = ({ onSubmitForm, testID }) =&gt;
     const rememberMeSwitchReference = useRef&lt;CustomSwitchLabelReference&gt;(null);
 &nbsp;
     const onSubmit = () =&gt; {
-        const emailValue = emailInputReference.current<span class="branch-0 cbranch-no" title="branch not covered" >?.g</span>etValue() || <span class="branch-1 cbranch-no" title="branch not covered" >'';</span>
-        const passwordValue = passwordInputReference.current<span class="branch-0 cbranch-no" title="branch not covered" >?.g</span>etValue() || <span class="branch-1 cbranch-no" title="branch not covered" >'';</span>
+        const emailValue = emailInputReference.current<span class="branch-0 cbranch-no" title="branch not covered" >?.g</span>etValue() || '';
+        const passwordValue = passwordInputReference.current<span class="branch-0 cbranch-no" title="branch not covered" >?.g</span>etValue() || '';
         const rememberMeValue = rememberMeSwitchReference.current<span class="branch-0 cbranch-no" title="branch not covered" >?.g</span>etValue();
         // console.log(
         //   'email',
@@ -281,7 +283,7 @@ export const LoginForm: React.FC&lt;Props&gt; = ({ onSubmitForm, testID }) =&gt;
                         placeholder={'email'}
                         secureTextEntry={false}
                         ref={emailInputReference}
-                        testID={'email-input'}
+                        testID={`${testID}-email-input`}
                     /&gt;
                 &lt;/View&gt;
                 &lt;View style={styles.inputContainer}&gt;
@@ -290,7 +292,7 @@ export const LoginForm: React.FC&lt;Props&gt; = ({ onSubmitForm, testID }) =&gt;
                         placeholder={'password'}
                         secureTextEntry={true}
                         ref={passwordInputReference}
-                        testID={'password-input'}
+                        testID={`${testID}-password-input`}
                     /&gt;
                 &lt;/View&gt;
             &lt;/View&gt;
@@ -302,6 +304,7 @@ export const LoginForm: React.FC&lt;Props&gt; = ({ onSubmitForm, testID }) =&gt;
                     thumbColorOff={Colors.grey}
                     labelText={'Remember me?'}
                     ref={rememberMeSwitchReference}
+                    testID={`${testID}-login-switch`}
                 /&gt;
             &lt;/View&gt;
             &lt;View style={styles.buttonContainer}&gt;
@@ -309,7 +312,7 @@ export const LoginForm: React.FC&lt;Props&gt; = ({ onSubmitForm, testID }) =&gt;
                     title={'Login'}
                     onPress={onSubmit}
                     color={Colors.pink}
-                    testID={'submit-button'}
+                    testID={`${testID}-submit-button`}
                 /&gt;
             &lt;/View&gt;
         &lt;/View&gt;
@@ -322,7 +325,7 @@ export const LoginForm: React.FC&lt;Props&gt; = ({ onSubmitForm, testID }) =&gt;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-10-21T14:05:03.342Z
+                at 2022-10-26T20:59:44.229Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
