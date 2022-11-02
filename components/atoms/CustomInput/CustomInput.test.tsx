@@ -48,5 +48,10 @@ describe('Atom Input', () => {
         const customInput = getByTestId('atom-input');
         fireEvent.changeText(customInput, 'input content');
         expect(inputRef.current?.getValue()).toBe('input content');
+        fireEvent(customInput, 'inputRef.current?.focus()');
+        // fireEvent(customInput, 'inputRef.current?.isFocused()');
+        inputRef.current?.focus();
+        // expect(inputRef.current?.focus()).toBeUndefined();
+        // console.log(inputRef.current?.isFocused());
     });
 });

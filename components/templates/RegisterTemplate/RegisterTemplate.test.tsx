@@ -40,16 +40,12 @@ describe('Template RegisterTemplate', () => {
             />
         );
 
-        const inputEmail = getByTestId(
-            'template-registerTemplate-email-input-input'
-        );
+        const inputEmail = getByTestId('organisms-registerForm-email-input');
         const inputPassword = getByTestId(
-            'template-registerTemplate-password-input-input'
+            'organisms-registerForm-password-input'
         );
 
-        const submitButton = getByTestId(
-            'template-registerTemplate-submit-button'
-        );
+        const submitButton = getByTestId('organisms-registerForm-button');
         fireEvent.changeText(inputPassword, 'haslo');
         fireEvent.changeText(inputEmail, 'mail@wp.pl');
         fireEvent.press(submitButton);
@@ -64,11 +60,10 @@ describe('Template RegisterTemplate', () => {
                 onPressFacebook={mockOnPressFacebook}
                 onPressLinkedin={mockOnPressLinked}
                 onPressNavigateLogin={mockOnPressNavigateLogin}
-                testID={'template-registerTemplate'}
             />
         );
         const linkedInIcon = getByTestId(
-            'template-registerTemplate-linkedIn-icon'
+            'templates-registerTemplate-linkedIn-icon'
         );
         expect(linkedInIcon.props.style[1].fontSize).toEqual(20);
         fireEvent.press(linkedInIcon);
@@ -83,11 +78,12 @@ describe('Template RegisterTemplate', () => {
                 onPressFacebook={mockOnPressFacebook}
                 onPressLinkedin={mockOnPressLinked}
                 onPressNavigateLogin={mockOnPressNavigateLogin}
-                testID={'template-registerTemplate'}
             />
         );
 
-        const googleIcon = getByTestId('template-registerTemplate-google-icon');
+        const googleIcon = getByTestId(
+            'templates-registerTemplate-google-icon'
+        );
         expect(googleIcon.props.style[1].fontSize).toEqual(20);
         fireEvent.press(googleIcon);
         expect(mockOnPressGoogle).toHaveBeenCalledTimes(1);
@@ -101,19 +97,18 @@ describe('Template RegisterTemplate', () => {
                 onPressFacebook={mockOnPressFacebook}
                 onPressLinkedin={mockOnPressLinked}
                 onPressNavigateLogin={mockOnPressNavigateLogin}
-                testID={'template-registerTemplate'}
             />
         );
 
         const facebookIcon = getByTestId(
-            'template-registerTemplate-facebook-icon'
+            'templates-registerTemplate-facebook-icon'
         );
         expect(facebookIcon.props.style[1].fontSize).toEqual(20);
         fireEvent.press(facebookIcon);
         expect(mockOnPressFacebook).toHaveBeenCalledTimes(1);
     });
 
-    test('ensure screenTitle works correctly', () => {
+    test('ensure go to login link works correctly', () => {
         const { getByTestId } = render(
             <RegisterTemplate
                 onSubmitForm={mockOnPress}
@@ -121,62 +116,12 @@ describe('Template RegisterTemplate', () => {
                 onPressFacebook={mockOnPressFacebook}
                 onPressLinkedin={mockOnPressLinked}
                 onPressNavigateLogin={mockOnPressNavigateLogin}
-                testID={'template-registerTemplate'}
             />
         );
 
-        const screenTitle = getByTestId(
-            'template-registerTemplate-screenTitile'
+        const registerLink = getByTestId(
+            'templates-registerTemplate-navigateLogin-link'
         );
-        expect(screenTitle).toHaveTextContent('SIGN UP');
-    });
-
-    test('ensure registerDivider works correctly', () => {
-        const { getByTestId } = render(
-            <RegisterTemplate
-                onSubmitForm={mockOnPress}
-                onPressGoogle={mockOnPressGoogle}
-                onPressFacebook={mockOnPressFacebook}
-                onPressLinkedin={mockOnPressLinked}
-                onPressNavigateLogin={mockOnPressNavigateLogin}
-                testID={'template-registerTemplate'}
-            />
-        );
-
-        const registerDivider = getByTestId(
-            'template-registerTemplate-divider'
-        );
-        expect(registerDivider).toHaveTextContent('OR');
-    });
-
-    test('ensure registerLabel works correctly', () => {
-        const { getByTestId } = render(
-            <RegisterTemplate
-                onSubmitForm={mockOnPress}
-                onPressGoogle={mockOnPressGoogle}
-                onPressFacebook={mockOnPressFacebook}
-                onPressLinkedin={mockOnPressLinked}
-                onPressNavigateLogin={mockOnPressNavigateLogin}
-                testID={'template-registerTemplate'}
-            />
-        );
-
-        const registerLabel = getByTestId('template-registerTemplate-label');
-        expect(registerLabel).toHaveTextContent('Already a user?');
-    });
-    test('ensure registerLink works correctly', () => {
-        const { getByTestId } = render(
-            <RegisterTemplate
-                onSubmitForm={mockOnPress}
-                onPressGoogle={mockOnPressGoogle}
-                onPressFacebook={mockOnPressFacebook}
-                onPressLinkedin={mockOnPressLinked}
-                onPressNavigateLogin={mockOnPressNavigateLogin}
-                testID={'template-registerTemplate'}
-            />
-        );
-
-        const registerLink = getByTestId('template-registerTemplate-link');
         expect(registerLink).toHaveTextContent('LOGIN');
     });
 });

@@ -30,7 +30,7 @@ export const RegisterForm: React.FC<Props> = ({ onSubmitForm, testID }) => {
                         placeholder={'email'}
                         secureTextEntry={false}
                         ref={emailInputReference}
-                        testID={`${testID}-email-input`}
+                        testID={'organisms-registerForm-email'}
                     />
                 </View>
                 <View style={styles.inputContainer}>
@@ -39,7 +39,7 @@ export const RegisterForm: React.FC<Props> = ({ onSubmitForm, testID }) => {
                         placeholder={'password'}
                         secureTextEntry={true}
                         ref={passwordInputReference}
-                        testID={`${testID}-password-input`}
+                        testID={'organisms-registerForm-password'}
                     />
                 </View>
             </View>
@@ -48,7 +48,7 @@ export const RegisterForm: React.FC<Props> = ({ onSubmitForm, testID }) => {
                     title={'SIGN UP'}
                     onPress={onSubmit}
                     color={Colors.pink}
-                    testID={`${testID}-submit-button`}
+                    testID={'organisms-registerForm-button'}
                 />
             </View>
         </View>

@@ -10,25 +10,17 @@ const mockOnPress = jest.fn();
 describe('Organism RegisterForm', () => {
     test('Component Snapshot', () => {
         const tree = renderer
-            .create(
-                <RegisterForm
-                    onSubmitForm={mockOnPress}
-                    testID={'organism-registerForm'}
-                />
-            )
+            .create(<RegisterForm onSubmitForm={mockOnPress} />)
             .toJSON();
         expect(tree).toMatchSnapshot();
     });
 
     test('ensure submit button works correctly', () => {
         const { getByTestId } = render(
-            <RegisterForm
-                onSubmitForm={mockOnPress}
-                testID={'organism-registerForm'}
-            />
+            <RegisterForm onSubmitForm={mockOnPress} />
         );
 
-        const submitButton = getByTestId('organism-registerForm-submit-button');
+        const submitButton = getByTestId('organisms-registerForm-button');
         fireEvent.press(submitButton);
         expect(mockOnPress).toHaveBeenCalledTimes(1);
         expect(submitButton).toHaveTextContent('SIGN UP');
@@ -36,29 +28,21 @@ describe('Organism RegisterForm', () => {
 
     test('ensure email input works correctly', () => {
         const { getByTestId } = render(
-            <RegisterForm
-                onSubmitForm={mockOnPress}
-                testID={'organism-registerForm'}
-            />
+            <RegisterForm onSubmitForm={mockOnPress} />
         );
 
-        const inputEmail = getByTestId(
-            'organism-registerForm-email-input-input'
-        );
+        const inputEmail = getByTestId('organisms-registerForm-email-input');
         fireEvent.changeText(inputEmail, 'mail@wp.pl');
         expect(inputEmail.props.value).toBe('mail@wp.pl');
     });
 
     test('ensure password input works correctly', () => {
         const { getByTestId } = render(
-            <RegisterForm
-                onSubmitForm={mockOnPress}
-                testID={'organism-registerForm'}
-            />
+            <RegisterForm onSubmitForm={mockOnPress} />
         );
 
         const inputPassword = getByTestId(
-            'organism-registerForm-password-input-input'
+            'organisms-registerForm-password-input'
         );
         fireEvent.changeText(inputPassword, 'haslo');
         expect(inputPassword.props.value).toBe('haslo');
@@ -66,19 +50,14 @@ describe('Organism RegisterForm', () => {
 
     test('ensure onSubmitForm works correctly', () => {
         const { getByTestId } = render(
-            <RegisterForm
-                onSubmitForm={mockOnPress}
-                testID={'organism-registerForm'}
-            />
+            <RegisterForm onSubmitForm={mockOnPress} />
         );
 
         const inputPassword = getByTestId(
-            'organism-registerForm-password-input-input'
+            'organisms-registerForm-password-input'
         );
-        const inputEmail = getByTestId(
-            'organism-registerForm-email-input-input'
-        );
-        const submitButton = getByTestId('organism-registerForm-submit-button');
+        const inputEmail = getByTestId('organisms-registerForm-email-input');
+        const submitButton = getByTestId('organisms-registerForm-button');
         fireEvent.changeText(inputPassword, 'haslo');
         fireEvent.changeText(inputEmail, 'mail@wp.pl');
         fireEvent.press(submitButton);

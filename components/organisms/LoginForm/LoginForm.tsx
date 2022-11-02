@@ -25,18 +25,14 @@ export const LoginForm: React.FC<Props> = ({ onSubmitForm, testID }) => {
     const rememberMeSwitchReference = useRef<CustomSwitchLabelReference>(null);
 
     const onSubmit = () => {
-        const emailValue = emailInputReference.current?.getValue() || '';
-        const passwordValue = passwordInputReference.current?.getValue() || '';
+        const emailValue = emailInputReference.current?.getValue();
+        const passwordValue = passwordInputReference.current?.getValue();
         const rememberMeValue = rememberMeSwitchReference.current?.getValue();
-        // console.log(
-        //   'email',
-        //   emailValue,
-        //   'password',
-        //   passwordValue,
-        //   'remember',
-        //   rememberMeValue,
-        // );
-        onSubmitForm(emailValue, passwordValue, rememberMeValue);
+        if (emailValue && passwordValue) {
+            onSubmitForm(emailValue, passwordValue, rememberMeValue);
+        } else {
+            onSubmitForm('', '', rememberMeValue);
+        }
     };
 
     return (
@@ -48,7 +44,7 @@ export const LoginForm: React.FC<Props> = ({ onSubmitForm, testID }) => {
                         placeholder={'email'}
                         secureTextEntry={false}
                         ref={emailInputReference}
-                        testID={`${testID}-email-input`}
+                        testID={'organism-loginForm-email'}
                     />
                 </View>
                 <View style={styles.inputContainer}>
@@ -57,7 +53,7 @@ export const LoginForm: React.FC<Props> = ({ onSubmitForm, testID }) => {
                         placeholder={'password'}
                         secureTextEntry={true}
                         ref={passwordInputReference}
-                        testID={`${testID}-password-input`}
+                        testID={'organism-loginForm-password'}
                     />
                 </View>
             </View>
@@ -69,7 +65,7 @@ export const LoginForm: React.FC<Props> = ({ onSubmitForm, testID }) => {
                     thumbColorOff={Colors.grey}
                     labelText={'Remember me?'}
                     ref={rememberMeSwitchReference}
-                    testID={`${testID}-login-switch`}
+                    testID={'organism-loginForm'}
                 />
             </View>
             <View style={styles.buttonContainer}>
@@ -77,7 +73,7 @@ export const LoginForm: React.FC<Props> = ({ onSubmitForm, testID }) => {
                     title={'Login'}
                     onPress={onSubmit}
                     color={Colors.pink}
-                    testID={`${testID}-submit-button`}
+                    testID={'organism-loginForm-button'}
                 />
             </View>
         </View>

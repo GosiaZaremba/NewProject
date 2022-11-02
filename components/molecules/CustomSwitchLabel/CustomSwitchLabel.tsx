@@ -12,8 +12,7 @@ export type Props = {
 };
 
 export type CustomSwitchLabelReference = {
-    getValue: () => boolean | undefined;
-    focus: () => void;
+    getValue: () => boolean;
 };
 
 export const CustomSwitchLabelWithReference: React.ForwardRefRenderFunction<
@@ -33,10 +32,7 @@ export const CustomSwitchLabelWithReference: React.ForwardRefRenderFunction<
     const switchReference = useRef<CustomSwitchReference>(null);
     useImperativeHandle(ref, () => ({
         getValue: () => {
-            return switchReference.current?.getValue();
-        },
-        focus: () => {
-            switchReference?.current?.focus();
+            return switchReference.current?.getValue() || false;
         },
     }));
     return (
