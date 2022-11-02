@@ -10,7 +10,7 @@ import React from 'react';
 
 import { View, StyleSheet } from 'react-native';
 import { Colors } from './constants/colors';
-import { LoginScreen, RegisterScreen } from './screens';
+import { LoginScreen, RegisterScreen } from './components/screens';
 import StorybookUIRoot from './storybook';
 
 const App = () => {

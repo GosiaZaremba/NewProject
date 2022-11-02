@@ -27,37 +27,36 @@ export const LoginTemplate: React.FC<Props> = ({
     onPressForgotPassword,
     onPressNavigateSignup,
     onPressLinkedin,
-    testID,
 }) => {
     return (
         <View style={styles.mainContainer}>
-            <ScreenTitle
-                screenTitle={'LOGIN'}
-                testID={`${testID}-screenTitile`}
+            <ScreenTitle screenTitle={'LOGIN'} />
+            <LoginForm
+                onSubmitForm={onSubmitForm}
+                testID={'templates-loginTemplate'}
             />
-            <LoginForm onSubmitForm={onSubmitForm} testID={`${testID}`} />
             <View style={styles.link}>
                 <Link
                     text={'Forgot Password?'}
                     onPress={onPressForgotPassword}
-                    testID={`${testID}`}
+                    testID={'templates-loginTemplate-forgotPassword-link'}
                 />
             </View>
             <View style={styles.divider}>
-                <Divider text={'OR'} testID={`${testID}-divider`} />
+                <Divider text={'OR'} />
             </View>
             <SocialLogin
                 onPressFacebook={onPressFacebook}
                 onPressGoogle={onPressGoogle}
                 onPressLinkedin={onPressLinkedin}
-                testID={`${testID}`}
+                testID={'templates-loginTemplate'}
             />
             <View style={styles.footer}>
-                <Label text={'Need an account? '} testID={`${testID}-label`} />
+                <Label text={'Need an account? '} />
                 <Link
                     text={'SIGN UP'}
                     onPress={onPressNavigateSignup}
-                    testID={`${testID}-link`}
+                    testID={'templates-loginTemplate-signUp-link'}
                 />
             </View>
         </View>

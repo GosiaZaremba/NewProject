@@ -48,6 +48,7 @@ describe('Molecule InputLabel', () => {
             />
         );
         const input = getByTestId('molecule-inputLabel-input');
+        expect(input.props.value).toBe('');
         fireEvent.changeText(input, 'input content');
         expect(inputLabelRef.current?.getValue()).toBe('input content');
     });

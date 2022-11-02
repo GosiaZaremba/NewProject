@@ -31,7 +31,7 @@ exports[`Organism RegisterForm Component Snapshot 1`] = `
               "marginBottom": 2,
             }
           }
-          testID="organism-registerForm-email-input-label"
+          testID="organisms-registerForm-email-label"
         >
           Email
         </Text>
@@ -48,7 +48,7 @@ exports[`Organism RegisterForm Component Snapshot 1`] = `
               "width": "100%",
             }
           }
-          testID="organism-registerForm-email-input-input"
+          testID="organisms-registerForm-email-input"
           value=""
         />
       </View>
@@ -68,7 +68,7 @@ exports[`Organism RegisterForm Component Snapshot 1`] = `
               "marginBottom": 2,
             }
           }
-          testID="organism-registerForm-password-input-label"
+          testID="organisms-registerForm-password-label"
         >
           Password
         </Text>
@@ -85,7 +85,7 @@ exports[`Organism RegisterForm Component Snapshot 1`] = `
               "width": "100%",
             }
           }
-          testID="organism-registerForm-password-input-input"
+          testID="organisms-registerForm-password-input"
           value=""
         />
       </View>
@@ -117,7 +117,7 @@ exports[`Organism RegisterForm Component Snapshot 1`] = `
           "opacity": 1,
         }
       }
-      testID="organism-registerForm-submit-button"
+      testID="organisms-registerForm-button"
     >
       <View
         style={

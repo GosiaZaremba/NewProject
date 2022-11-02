@@ -37,9 +37,6 @@ describe('Molecule SwitchLabel', () => {
             />
         );
         const customSwitchLabel = getByTestId('molecule-switchLabel-switch');
-        fireEvent(customSwitchLabel, 'onValueChange', {
-            value: true,
-        });
         const label = getByTestId('molecule-switchLabel-label');
         expect(label.props.children).toBe('Molecule switch label');
         expect(customSwitchLabel.props.thumbTintColor).toBe(Colors.grey);
@@ -61,11 +58,10 @@ describe('Molecule SwitchLabel', () => {
             />
         );
         const customSwitchLabel = getByTestId('molecule-switchLabel-switch');
+        expect(customSwitchLabel.props.value).toBeFalsy();
         fireEvent(customSwitchLabel, 'onValueChange', {
             value: true,
         });
-        expect(customSwitchLabelRef.current?.getValue()).toBe(true);
-        const label = getByTestId('molecule-switchLabel-label');
-        expect(label.props.children).toBe('Molecule switch label');
+        expect(customSwitchLabelRef.current?.getValue()).toBeTruthy();
     });
 });

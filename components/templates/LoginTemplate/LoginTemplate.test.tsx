@@ -23,7 +23,6 @@ describe('Template LoginTemplate', () => {
                     onPressLinkedin={mockOnPressLinked}
                     onPressForgotPassword={mockOnPressForgotPassword}
                     onPressNavigateSignup={mockOnPressNavigateSignup}
-                    testID={'template-loginTemplate'}
                 />
             )
             .toJSON();
@@ -39,22 +38,13 @@ describe('Template LoginTemplate', () => {
                 onPressLinkedin={mockOnPressLinked}
                 onPressForgotPassword={mockOnPressForgotPassword}
                 onPressNavigateSignup={mockOnPressNavigateSignup}
-                testID={'template-loginTemplate'}
             />
         );
 
-        const inputEmail = getByTestId(
-            'template-loginTemplate-email-input-input'
-        );
-        const inputPassword = getByTestId(
-            'template-loginTemplate-password-input-input'
-        );
-        const loginSwitch = getByTestId(
-            'template-loginTemplate-login-switch-switch'
-        );
-        const submitButton = getByTestId(
-            'template-loginTemplate-submit-button'
-        );
+        const inputEmail = getByTestId('organism-loginForm-email-input');
+        const inputPassword = getByTestId('organism-loginForm-password-input');
+        const loginSwitch = getByTestId('organism-loginForm-switch');
+        const submitButton = getByTestId('organism-loginForm-button');
         fireEvent.changeText(inputPassword, 'haslo');
         fireEvent.changeText(inputEmail, 'mail@wp.pl');
         fireEvent(loginSwitch, 'onValueChange', { value: true });
@@ -71,11 +61,10 @@ describe('Template LoginTemplate', () => {
                 onPressLinkedin={mockOnPressLinked}
                 onPressForgotPassword={mockOnPressForgotPassword}
                 onPressNavigateSignup={mockOnPressNavigateSignup}
-                testID={'template-loginTemplate'}
             />
         );
         const linkedInIcon = getByTestId(
-            'template-loginTemplate-linkedIn-icon'
+            'templates-loginTemplate-linkedIn-icon'
         );
         expect(linkedInIcon.props.style[1].fontSize).toEqual(20);
         fireEvent.press(linkedInIcon);
@@ -91,11 +80,10 @@ describe('Template LoginTemplate', () => {
                 onPressLinkedin={mockOnPressLinked}
                 onPressForgotPassword={mockOnPressForgotPassword}
                 onPressNavigateSignup={mockOnPressNavigateSignup}
-                testID={'template-loginTemplate'}
             />
         );
 
-        const googleIcon = getByTestId('template-loginTemplate-google-icon');
+        const googleIcon = getByTestId('templates-loginTemplate-google-icon');
         expect(googleIcon.props.style[1].fontSize).toEqual(20);
         fireEvent.press(googleIcon);
         expect(mockOnPressGoogle).toHaveBeenCalledTimes(1);
@@ -110,84 +98,14 @@ describe('Template LoginTemplate', () => {
                 onPressLinkedin={mockOnPressLinked}
                 onPressForgotPassword={mockOnPressForgotPassword}
                 onPressNavigateSignup={mockOnPressNavigateSignup}
-                testID={'template-loginTemplate'}
             />
         );
 
         const facebookIcon = getByTestId(
-            'template-loginTemplate-facebook-icon'
+            'templates-loginTemplate-facebook-icon'
         );
         expect(facebookIcon.props.style[1].fontSize).toEqual(20);
         fireEvent.press(facebookIcon);
         expect(mockOnPressFacebook).toHaveBeenCalledTimes(1);
-    });
-
-    test('ensure screenTitle works correctly', () => {
-        const { getByTestId } = render(
-            <LoginTemplate
-                onSubmitForm={mockOnPress}
-                onPressGoogle={mockOnPressGoogle}
-                onPressFacebook={mockOnPressFacebook}
-                onPressLinkedin={mockOnPressLinked}
-                onPressForgotPassword={mockOnPressForgotPassword}
-                onPressNavigateSignup={mockOnPressNavigateSignup}
-                testID={'template-loginTemplate'}
-            />
-        );
-
-        const screenTitle = getByTestId('template-loginTemplate-screenTitile');
-        expect(screenTitle).toHaveTextContent('LOGIN');
-    });
-
-    test('ensure loginDivider works correctly', () => {
-        const { getByTestId } = render(
-            <LoginTemplate
-                onSubmitForm={mockOnPress}
-                onPressGoogle={mockOnPressGoogle}
-                onPressFacebook={mockOnPressFacebook}
-                onPressLinkedin={mockOnPressLinked}
-                onPressForgotPassword={mockOnPressForgotPassword}
-                onPressNavigateSignup={mockOnPressNavigateSignup}
-                testID={'template-loginTemplate'}
-            />
-        );
-
-        const loginDivider = getByTestId('template-loginTemplate-divider');
-        expect(loginDivider).toHaveTextContent('OR');
-    });
-
-    test('ensure loginLabel works correctly', () => {
-        const { getByTestId } = render(
-            <LoginTemplate
-                onSubmitForm={mockOnPress}
-                onPressGoogle={mockOnPressGoogle}
-                onPressFacebook={mockOnPressFacebook}
-                onPressLinkedin={mockOnPressLinked}
-                onPressForgotPassword={mockOnPressForgotPassword}
-                onPressNavigateSignup={mockOnPressNavigateSignup}
-                testID={'template-loginTemplate'}
-            />
-        );
-
-        const loginLabel = getByTestId('template-loginTemplate-label');
-        expect(loginLabel).toHaveTextContent('Need an account?');
-    });
-    test('ensure loginLink works correctly', () => {
-        const { getByTestId } = render(
-            <LoginTemplate
-                onSubmitForm={mockOnPress}
-                onPressGoogle={mockOnPressGoogle}
-                onPressFacebook={mockOnPressFacebook}
-                onPressLinkedin={mockOnPressLinked}
-                onPressForgotPassword={mockOnPressForgotPassword}
-                onPressNavigateSignup={mockOnPressNavigateSignup}
-                testID={'template-loginTemplate'}
-            />
-        );
-
-        const loginLink = getByTestId('template-loginTemplate-link');
-        expect(loginLink).toHaveTextContent('SIGN UP');
-        fireEvent.press(loginLink);
-        expect(mockOnPress).toHaveBeenCalledTimes(1);
     });
 });

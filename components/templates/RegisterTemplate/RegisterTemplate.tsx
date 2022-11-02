@@ -24,26 +24,23 @@ export const RegisterTemplate: React.FC<Props> = ({
 }) => {
     return (
         <View style={styles.mainContainer}>
-            <ScreenTitle
-                screenTitle={'SIGN UP'}
-                testID={`${testID}-screenTitile`}
-            />
-            <RegisterForm onSubmitForm={onSubmitForm} testID={`${testID}`} />
+            <ScreenTitle screenTitle={'SIGN UP'} />
+            <RegisterForm onSubmitForm={onSubmitForm} />
             <View style={styles.divider}>
-                <Divider text={'OR'} testID={`${testID}-divider`} />
+                <Divider text={'OR'} />
             </View>
             <SocialLogin
                 onPressFacebook={onPressFacebook}
                 onPressGoogle={onPressGoogle}
                 onPressLinkedin={onPressLinkedin}
-                testID={`${testID}`}
+                testID={'templates-registerTemplate'}
             />
             <View style={styles.footer}>
-                <Label text={'Already a user? '} testID={`${testID}-label`} />
+                <Label text={'Already a user? '} />
                 <Link
                     text={'LOGIN'}
                     onPress={onPressNavigateLogin}
-                    testID={`${testID}-link`}
+                    testID={'templates-registerTemplate-navigateLogin-link'}
                 />
             </View>
         </View>

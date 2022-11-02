@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Template LoginTemplate Component Snapshot 1`] = `
+exports[`Screen RegisterScreen Component Snapshot 1`] = `
 <View
   style={
     Object {
@@ -17,7 +17,7 @@ exports[`Template LoginTemplate Component Snapshot 1`] = `
       }
     }
   >
-    LOGIN
+    SIGN UP
   </Text>
   <View
     style={
@@ -49,7 +49,7 @@ exports[`Template LoginTemplate Component Snapshot 1`] = `
                 "marginBottom": 2,
               }
             }
-            testID="organism-loginForm-email-label"
+            testID="organisms-registerForm-email-label"
           >
             Email
           </Text>
@@ -66,7 +66,7 @@ exports[`Template LoginTemplate Component Snapshot 1`] = `
                 "width": "100%",
               }
             }
-            testID="organism-loginForm-email-input"
+            testID="organisms-registerForm-email-input"
             value=""
           />
         </View>
@@ -86,7 +86,7 @@ exports[`Template LoginTemplate Component Snapshot 1`] = `
                 "marginBottom": 2,
               }
             }
-            testID="organism-loginForm-password-label"
+            testID="organisms-registerForm-password-label"
           >
             Password
           </Text>
@@ -103,51 +103,10 @@ exports[`Template LoginTemplate Component Snapshot 1`] = `
                 "width": "100%",
               }
             }
-            testID="organism-loginForm-password-input"
+            testID="organisms-registerForm-password-input"
             value=""
           />
         </View>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "alignSelf": "flex-start",
-          "flexDirection": "row",
-          "marginTop": 10,
-        }
-      }
-    >
-      <View>
-        <RCTSwitch
-          accessibilityRole="switch"
-          onChange={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          onTintColor="#908D8E"
-          style={
-            Object {
-              "height": 31,
-              "width": 51,
-            }
-          }
-          testID="organism-loginForm-switch"
-          thumbTintColor="#908D8E"
-          tintColor="#908D8E"
-          value={false}
-        />
-        <Text
-          style={
-            Object {
-              "color": "black",
-              "marginBottom": 2,
-            }
-          }
-          testID="organism-loginForm-label"
-        >
-          Remember me?
-        </Text>
       </View>
     </View>
     <View
@@ -159,7 +118,7 @@ exports[`Template LoginTemplate Component Snapshot 1`] = `
       }
     >
       <View
-        accessibilityLabel="Login"
+        accessibilityLabel="SIGN UP"
         accessibilityRole="button"
         accessible={true}
         collapsable={false}
@@ -176,7 +135,7 @@ exports[`Template LoginTemplate Component Snapshot 1`] = `
             "opacity": 1,
           }
         }
-        testID="organism-loginForm-button"
+        testID="organisms-registerForm-button"
       >
         <View
           style={
@@ -200,31 +159,11 @@ exports[`Template LoginTemplate Component Snapshot 1`] = `
               ]
             }
           >
-            Login
+            SIGN UP
           </Text>
         </View>
       </View>
     </View>
-  </View>
-  <View
-    style={
-      Object {
-        "alignSelf": "flex-end",
-      }
-    }
-  >
-    <Text
-      onPress={[MockFunction]}
-      style={
-        Object {
-          "color": "black",
-          "textDecorationLine": "underline",
-        }
-      }
-      testID="templates-loginTemplate-forgotPassword-link"
-    >
-      Forgot Password?
-    </Text>
   </View>
   <View
     style={
@@ -306,7 +245,7 @@ exports[`Template LoginTemplate Component Snapshot 1`] = `
           },
         ]
       }
-      testID="templates-loginTemplate-google-pressable"
+      testID="templates-registerTemplate-google-pressable"
     >
       <Text
         allowFontScaling={false}
@@ -328,7 +267,7 @@ exports[`Template LoginTemplate Component Snapshot 1`] = `
             Object {},
           ]
         }
-        testID="templates-loginTemplate-google-icon"
+        testID="templates-registerTemplate-google-icon"
       >
         
       </Text>
@@ -365,7 +304,7 @@ exports[`Template LoginTemplate Component Snapshot 1`] = `
           },
         ]
       }
-      testID="templates-loginTemplate-facebook-pressable"
+      testID="templates-registerTemplate-facebook-pressable"
     >
       <Text
         allowFontScaling={false}
@@ -387,7 +326,7 @@ exports[`Template LoginTemplate Component Snapshot 1`] = `
             Object {},
           ]
         }
-        testID="templates-loginTemplate-facebook-icon"
+        testID="templates-registerTemplate-facebook-icon"
       >
         
       </Text>
@@ -424,7 +363,7 @@ exports[`Template LoginTemplate Component Snapshot 1`] = `
           },
         ]
       }
-      testID="templates-loginTemplate-linkedIn-pressable"
+      testID="templates-registerTemplate-linkedIn-pressable"
     >
       <Text
         allowFontScaling={false}
@@ -446,7 +385,7 @@ exports[`Template LoginTemplate Component Snapshot 1`] = `
             Object {},
           ]
         }
-        testID="templates-loginTemplate-linkedIn-icon"
+        testID="templates-registerTemplate-linkedIn-icon"
       >
         
       </Text>
@@ -468,19 +407,19 @@ exports[`Template LoginTemplate Component Snapshot 1`] = `
         }
       }
     >
-      Need an account? 
+      Already a user? 
     </Text>
     <Text
-      onPress={[MockFunction]}
+      onPress={[Function]}
       style={
         Object {
           "color": "black",
           "textDecorationLine": "underline",
         }
       }
-      testID="templates-loginTemplate-signUp-link"
+      testID="templates-registerTemplate-navigateLogin-link"
     >
-      SIGN UP
+      LOGIN
     </Text>
   </View>
 </View>

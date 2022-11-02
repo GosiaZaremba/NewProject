@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Template LoginTemplate Component Snapshot 1`] = `
+exports[`Screen LoginScreen Component Snapshot 1`] = `
 <View
   style={
     Object {
@@ -214,7 +214,7 @@ exports[`Template LoginTemplate Component Snapshot 1`] = `
     }
   >
     <Text
-      onPress={[MockFunction]}
+      onPress={[Function]}
       style={
         Object {
           "color": "black",
@@ -471,7 +471,7 @@ exports[`Template LoginTemplate Component Snapshot 1`] = `
       Need an account? 
     </Text>
     <Text
-      onPress={[MockFunction]}
+      onPress={[Function]}
       style={
         Object {
           "color": "black",

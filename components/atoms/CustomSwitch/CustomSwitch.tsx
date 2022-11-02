@@ -17,7 +17,6 @@ export type Props = {
 
 export type CustomSwitchReference = {
     getValue: () => boolean;
-    focus: () => void;
 };
 
 export const CustomSwitchWithReference: React.ForwardRefRenderFunction<
@@ -36,9 +35,6 @@ export const CustomSwitchWithReference: React.ForwardRefRenderFunction<
     useImperativeHandle(ref, () => ({
         getValue: () => {
             return remember;
-        },
-        focus: () => {
-            switchReference?.current?.focus();
         },
     }));
     return (

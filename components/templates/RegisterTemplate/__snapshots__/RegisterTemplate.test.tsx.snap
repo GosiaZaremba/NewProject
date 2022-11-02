@@ -16,7 +16,6 @@ exports[`Template RegisterTemplate Component Snapshot 1`] = `
         "fontWeight": "700",
       }
     }
-    testID="template-registerTemplate-screenTitile"
   >
     SIGN UP
   </Text>
@@ -50,7 +49,7 @@ exports[`Template RegisterTemplate Component Snapshot 1`] = `
                 "marginBottom": 2,
               }
             }
-            testID="template-registerTemplate-email-input-label"
+            testID="organisms-registerForm-email-label"
           >
             Email
           </Text>
@@ -67,7 +66,7 @@ exports[`Template RegisterTemplate Component Snapshot 1`] = `
                 "width": "100%",
               }
             }
-            testID="template-registerTemplate-email-input-input"
+            testID="organisms-registerForm-email-input"
             value=""
           />
         </View>
@@ -87,7 +86,7 @@ exports[`Template RegisterTemplate Component Snapshot 1`] = `
                 "marginBottom": 2,
               }
             }
-            testID="template-registerTemplate-password-input-label"
+            testID="organisms-registerForm-password-label"
           >
             Password
           </Text>
@@ -104,7 +103,7 @@ exports[`Template RegisterTemplate Component Snapshot 1`] = `
                 "width": "100%",
               }
             }
-            testID="template-registerTemplate-password-input-input"
+            testID="organisms-registerForm-password-input"
             value=""
           />
         </View>
@@ -136,7 +135,7 @@ exports[`Template RegisterTemplate Component Snapshot 1`] = `
             "opacity": 1,
           }
         }
-        testID="template-registerTemplate-submit-button"
+        testID="organisms-registerForm-button"
       >
         <View
           style={
@@ -198,7 +197,6 @@ exports[`Template RegisterTemplate Component Snapshot 1`] = `
             "position": "absolute",
           }
         }
-        testID="template-registerTemplate-divider"
       >
         <Text>
           OR
@@ -247,7 +245,7 @@ exports[`Template RegisterTemplate Component Snapshot 1`] = `
           },
         ]
       }
-      testID="template-registerTemplate-google-pressable"
+      testID="templates-registerTemplate-google-pressable"
     >
       <Text
         allowFontScaling={false}
@@ -269,7 +267,7 @@ exports[`Template RegisterTemplate Component Snapshot 1`] = `
             Object {},
           ]
         }
-        testID="template-registerTemplate-google-icon"
+        testID="templates-registerTemplate-google-icon"
       >
         
       </Text>
@@ -306,7 +304,7 @@ exports[`Template RegisterTemplate Component Snapshot 1`] = `
           },
         ]
       }
-      testID="template-registerTemplate-facebook-pressable"
+      testID="templates-registerTemplate-facebook-pressable"
     >
       <Text
         allowFontScaling={false}
@@ -328,7 +326,7 @@ exports[`Template RegisterTemplate Component Snapshot 1`] = `
             Object {},
           ]
         }
-        testID="template-registerTemplate-facebook-icon"
+        testID="templates-registerTemplate-facebook-icon"
       >
         
       </Text>
@@ -365,7 +363,7 @@ exports[`Template RegisterTemplate Component Snapshot 1`] = `
           },
         ]
       }
-      testID="template-registerTemplate-linkedIn-pressable"
+      testID="templates-registerTemplate-linkedIn-pressable"
     >
       <Text
         allowFontScaling={false}
@@ -387,7 +385,7 @@ exports[`Template RegisterTemplate Component Snapshot 1`] = `
             Object {},
           ]
         }
-        testID="template-registerTemplate-linkedIn-icon"
+        testID="templates-registerTemplate-linkedIn-icon"
       >
         
       </Text>
@@ -408,7 +406,6 @@ exports[`Template RegisterTemplate Component Snapshot 1`] = `
           "marginBottom": 2,
         }
       }
-      testID="template-registerTemplate-label"
     >
       Already a user? 
     </Text>
@@ -420,7 +417,7 @@ exports[`Template RegisterTemplate Component Snapshot 1`] = `
           "textDecorationLine": "underline",
         }
       }
-      testID="template-registerTemplate-link"
+      testID="templates-registerTemplate-navigateLogin-link"
     >
       LOGIN
     </Text>
