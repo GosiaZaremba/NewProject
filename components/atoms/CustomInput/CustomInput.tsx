@@ -16,7 +16,7 @@ export type Props = {
 export type CustomInputReference = {
     getValue: () => string;
     focus: () => void;
-    // isFocused: () => boolean | undefined;
+    isFocused: () => boolean | undefined;
 };
 
 const CustomInputWithReference: React.ForwardRefRenderFunction<
@@ -38,9 +38,9 @@ const CustomInputWithReference: React.ForwardRefRenderFunction<
         focus: () => {
             inputReference.current?.focus();
         },
-        // isFocused: () => {
-        //     return inputReference.current?.isFocused();
-        // },
+        isFocused: () => {
+            return inputReference.current?.isFocused();
+        },
     }));
 
     return (
