@@ -43,7 +43,6 @@ describe('Atom CustomIcon', () => {
         expect(mockOnPress).toHaveBeenCalledTimes(1);
         expect(customIcon.props.style[1].fontSize).toBe(18);
         expect(customIcon.props.style[0].color).toBe(Colors.blue);
-        // console.log(customIcon.props);
     });
     test('ensure pressable works correctly when pressed', () => {
         const { getByTestId } = render(
@@ -79,8 +78,7 @@ describe('Atom CustomIcon', () => {
         const iconPressable = getByTestId('atom-icon-pressable');
         fireEvent.press(iconPressable);
         expect(mockOnPress).toHaveBeenCalledTimes(3);
-        // expect(iconPressable.props.style[1].borderColor).toBe(Colors.blue);
-        // expect(iconPressable.props.style[0].opacity).toBe(undefined);
-        console.log(iconPressable.props.style);
+        expect(iconPressable.props.style[1].borderColor).toBe(Colors.blue);
+        expect(iconPressable.props.style[0].opacity).toBe(undefined);
     });
 });
