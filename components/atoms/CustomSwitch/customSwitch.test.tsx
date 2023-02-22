@@ -54,5 +54,7 @@ describe('Atom Switch', () => {
         const customSwitch = getByTestId('atom-switch');
         fireEvent(customSwitch, 'onValueChange', { value: true });
         expect(switchRef.current?.getValue()).toBe(true);
+        console.log(switchRef.current?.getValue());
+        console.log(customSwitch);
     });
 });
